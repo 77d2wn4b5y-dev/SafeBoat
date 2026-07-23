@@ -34,3 +34,13 @@
 - Dodato je lokalno čuvanje ruta i GeoJSON uvoz i izvoz.
 - Dodata je provera koridora rute u odnosu na poznate opasnosti.
 - Voice Copilot je proširen glasovnim navođenjem duž rute.
+
+## v0.9.0 — Anchor Watch & Man Overboard
+
+- Dodati su nadzor pozicije sidra i podesiv radijus Anchor Watch zone.
+- Dodata su upozorenja na zanošenje sidra, kvalitet GPS-a i gubitak GPS signala.
+- Dodato je čuvanje MOB pozicije sa udaljenošću i kursom za povratak do MOB tačke.
+- Dodat je dijalog za hitni broj 112 sa prikazom i kopiranjem koordinata.
+- Voice Copilot je proširen hitnim Anchor Watch i MOB porukama.
+- Trip Recorder beleži Anchor Watch upozorenja i MOB događaje u aktivnoj vožnji.
+- Dodate su pristupačne i zaštićene kontrole hitnih funkcija.
