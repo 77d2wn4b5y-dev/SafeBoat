@@ -6,6 +6,8 @@
   const returnButton = document.querySelector('#return-home');
   const state = document.querySelector('#gps-state');
   const message = document.querySelector('#message');
+  const settingsDialog = document.querySelector('#settings-dialog');
+  const aboutDialog = document.querySelector('#about-dialog');
   let positionMarker;
   let accuracyCircle;
   let homeMarker;
@@ -68,6 +70,18 @@
     map.fitBounds(L.latLngBounds(current, home).pad(.25));
     homeMarker.openPopup();
   });
+
+  document.querySelector('#settings-open').addEventListener('click', () => settingsDialog.showModal());
+  document.querySelector('#about-open').addEventListener('click', () => {
+    settingsDialog.close();
+    aboutDialog.showModal();
+  });
+  document.querySelectorAll('[data-demo]').forEach(button => button.addEventListener('click', () => {
+    window.dispatchEvent(new CustomEvent('safeboat:safety-alert', { detail: { severity: button.dataset.demo } }));
+  }));
+  document.querySelectorAll('dialog').forEach(dialog => dialog.addEventListener('click', event => {
+    if (event.target === dialog) dialog.close();
+  }));
 
   window.SafeBoatMap.loadAllLayers().catch(error => showMessage(`Neke tačke nisu učitane: ${error.message}`));
   if ('serviceWorker' in navigator) window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js'));

@@ -1,7 +1,7 @@
-const CACHE = 'safeboat-v3';
+const CACHE = 'safeboat-v0.6.0';
 const APP_SHELL = [
   './', './index.html', './styles.css', './manifest.webmanifest',
-  './js/map.js', './js/gps.js', './js/app.js',
+  './js/map.js', './js/gps.js', './js/voice-copilot.js', './js/app.js', './CHANGELOG.md',
   './data/beaches.geojson', './data/rocks.geojson',
   './data/marinas.geojson', './data/fuel.geojson'
 ];

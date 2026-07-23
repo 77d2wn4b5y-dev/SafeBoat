@@ -20,6 +20,10 @@
       <span class="subtitle">Sitonija</span>
     </div>
     <span id="gps-state" class="status" aria-live="polite"><i></i> GPS nije aktivan</span>
+    <div class="header-actions">
+      <button id="voice-toggle" class="icon-button" type="button" aria-label="Isključi glasovna upozorenja" aria-pressed="true">🔊</button>
+      <button id="settings-open" class="icon-button" type="button" aria-label="Podešavanja">⚙️</button>
+    </div>
   </header>
 
   <section class="panel controls" aria-label="Kontrole navigacije">
@@ -36,9 +40,33 @@
 
   <div id="message" class="message" role="status" aria-live="polite"></div>
 
+  <dialog id="settings-dialog" class="app-dialog">
+    <form method="dialog">
+      <header><h2>Podešavanja</h2><button class="close-button" value="cancel" aria-label="Zatvori">×</button></header>
+      <label for="voice-language">Jezik glasovnih upozorenja</label>
+      <select id="voice-language">
+        <option value="sr-RS">Srpski</option><option value="en-US">English</option><option value="el-GR">Ελληνικά</option>
+      </select>
+      <section class="demo-box" aria-labelledby="demo-title">
+        <h3 id="demo-title">Demo režim</h3><p>Poslušajte upozorenja bez pokretanja navigacije.</p>
+        <div class="demo-actions"><button type="button" data-demo="INFO">INFO</button><button type="button" data-demo="WARNING">WARNING</button><button type="button" data-demo="DANGER">DANGER</button></div>
+      </section>
+      <button id="about-open" type="button">O aplikaciji</button>
+    </form>
+  </dialog>
+
+  <dialog id="about-dialog" class="app-dialog">
+    <form method="dialog"><header><h2>O aplikaciji</h2><button class="close-button" value="cancel" aria-label="Zatvori">×</button></header>
+      <p class="version"><strong>SafeBoat v0.6.0</strong><br><small>Poslednje ažuriranje: 23. jul 2026.</small></p>
+      <h3>Šta je novo</h3><ul><li>Voice Copilot sa tri nivoa upozorenja</li><li>Srpski, engleski i grčki glas</li><li>Demo režim i rezervni zvučni signal</li></ul>
+      <p class="disclaimer">SafeBoat je pomoćni alat za navigaciju. Ne zamenjuje zvanične karte, propise, pomorsku opremu ni procenu skipera.</p>
+    </form>
+  </dialog>
+
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
   <script src="js/map.js"></script>
   <script src="js/gps.js"></script>
+  <script src="js/voice-copilot.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>

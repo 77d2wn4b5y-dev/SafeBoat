@@ -2,7 +2,7 @@
   "id": "./",
   "name": "SafeBoat — Sitonija",
   "short_name": "SafeBoat",
-  "description": "PWA pomoćnik za bezbedniju rekreativnu plovidbu oko Sitonije.",
+  "description": "SafeBoat v0.6.0 — Voice Copilot za bezbedniju rekreativnu plovidbu oko Sitonije.",
   "lang": "sr",
   "start_url": "./index.html",
   "scope": "./",
