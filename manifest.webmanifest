@@ -1,0 +1,9 @@
+{
+  "name": "SafeBoat Greece",
+  "short_name": "SafeBoat",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#071d2b",
+  "theme_color": "#071d2b",
+  "description": "GPS pomoćna aplikacija za rekreativnu plovidbu oko Dijaporosa."
+}
