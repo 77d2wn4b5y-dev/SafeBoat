@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#06283d">
-  <meta name="application-version" content="0.9.0">
+  <meta name="application-version" content="0.10.0">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <title>SafeBoat — Sitonija</title>
@@ -17,7 +17,7 @@
 
   <header class="panel header-panel">
     <div>
-      <strong class="brand">⚓ SafeBoat <small>v0.9.0</small></strong>
+      <strong class="brand">⚓ SafeBoat <small>v0.10.0</small></strong>
       <span class="subtitle">Sitonija</span>
     </div>
     <div class="header-tools">
@@ -104,31 +104,30 @@
   <div id="message" class="message" role="status" aria-live="polite"></div>
 
   <dialog id="settings-dialog" aria-labelledby="settings-title">
-    <form method="dialog" class="dialog-card">
-      <div class="dialog-heading"><h2 id="settings-title">Podešavanja</h2><button class="dialog-close" value="close" aria-label="Zatvori">×</button></div>
-      <label for="voice-language">Jezik glasovnih upozorenja</label>
-      <select id="voice-language">
-        <option value="sr-RS">Srpski</option><option value="en-US">English</option><option value="el-GR">Ελληνικά</option>
-      </select>
-      <p id="voice-state" class="voice-state" aria-live="polite">Glasovna upozorenja su uključena</p>
-      <label for="settings-anchor-radius">Podrazumevani Anchor Watch radijus</label><input id="settings-anchor-radius" type="number" min="20" max="300" step="10" value="50">
-      <label class="setting-check"><input id="mob-confirmation" type="checkbox" checked> Zaštitna potvrda za MOB (uvek ostaje najmanje jedna zaštita)</label>
-      <fieldset><legend>Demo upozorenja</legend><div class="demo-actions">
-        <button type="button" data-voice-demo="INFO">INFO</button><button type="button" data-voice-demo="WARNING">WARNING</button><button type="button" data-voice-demo="DANGER">DANGER</button>
-      </div></fieldset>
-      <button id="about-open" type="button">O aplikaciji</button>
-    </form>
+    <div class="dialog-card settings-card">
+      <div class="dialog-heading"><h2 id="settings-title">Podešavanja</h2><button class="dialog-close" type="button" data-dialog-close aria-label="Zatvori podešavanja">×</button></div>
+      <nav class="settings-nav" aria-label="Sekcije podešavanja"><a href="#settings-general">Opšte</a><a href="#settings-gps">GPS</a><a href="#settings-voice">Glas</a><a href="#settings-navigation">Navigacija</a><a href="#settings-trip">Vožnje</a><a href="#settings-anchor">Sidro</a><a href="#settings-appearance">Izgled</a><a href="#settings-about">O aplikaciji</a></nav>
+      <section id="settings-general"><h3>Opšte</h3><p>SafeBoat čuva podešavanja samo na ovom uređaju.</p></section>
+      <section id="settings-gps"><h3>GPS</h3><p>Visoka preciznost se koristi samo dok je GPS praćenje aktivno.</p></section>
+      <section id="settings-voice"><h3>Glas</h3><label for="voice-language">Jezik glasovnih upozorenja</label><select id="voice-language"><option value="sr-RS">Srpski</option><option value="en-US">English</option><option value="el-GR">Ελληνικά</option></select><p id="voice-state" class="voice-state" aria-live="polite">Glasovna upozorenja su uključena</p><fieldset><legend>Proba upozorenja</legend><div class="demo-actions"><button type="button" data-voice-demo="INFO">INFO</button><button type="button" data-voice-demo="WARNING">WARNING</button><button type="button" data-voice-demo="DANGER">DANGER</button></div></fieldset></section>
+      <section id="settings-navigation"><h3>Navigacija</h3><p>Praćenje plovila se podešava u panelu planera rute.</p></section>
+      <section id="settings-trip"><h3>Trip Recorder</h3><p>Snimanje i dnevnik ostaju dostupni sa glavnog ekrana.</p></section>
+      <section id="settings-anchor"><h3>Anchor Watch</h3><label for="settings-anchor-radius">Podrazumevani radijus</label><input id="settings-anchor-radius" type="number" min="20" max="300" step="10" value="50"><label class="setting-check"><input id="mob-confirmation" type="checkbox" checked> Zaštitna potvrda za MOB</label></section>
+      <section id="settings-appearance"><h3>Izgled</h3><label for="theme-select">Tema</label><select id="theme-select"><option value="system">Sistem</option><option value="light">Svetla</option><option value="dark">Tamna</option></select></section>
+      <section id="settings-about"><h3>O aplikaciji</h3><button id="about-open" type="button">Detalji o aplikaciji i skladištu</button></section>
+    </div>
   </dialog>
 
   <dialog id="about-dialog" aria-labelledby="about-title">
-    <form method="dialog" class="dialog-card">
-      <div class="dialog-heading"><h2 id="about-title">SafeBoat v0.9.0</h2><button class="dialog-close" value="close" aria-label="Zatvori">×</button></div>
-      <p><strong>Voice Copilot</strong> daje glasovna, zvučna i vibraciona upozorenja na srpskom, engleskom i grčkom jeziku.</p>
-      <p><strong>Safety Engine</strong> koristi postojeći GPS tok da proceni blizinu i smer kretanja ka opasnostima.</p>
-      <p>Ažurirano: 23. jul 2026.</p>
-      <p class="disclaimer">SafeBoat je pomoćni alat za navigaciju. Ne zamenjuje zvanične nautičke karte, lokalne propise, sigurnosnu opremu ni procenu skipera.</p>
-      <p class="disclaimer">Anchor Watch i MOB funkcije su pomoćni alati. Ne zamenjuju stalni nadzor plovila, odgovarajuću posadu, sigurnosnu opremu, VHF radio, zvanične nautičke procedure niti hitne službe.</p>
-    </form>
+    <div class="dialog-card about-card">
+      <div class="dialog-heading"><h2 id="about-title">SafeBoat v0.10.0</h2><button class="dialog-close" type="button" data-dialog-close aria-label="Zatvori informacije">×</button></div>
+      <dl class="about-grid"><div><dt>Verzija</dt><dd>v0.10.0</dd></div><div><dt>Build</dt><dd>2026.07.23</dd></div><div><dt>Mreža</dt><dd id="about-offline">Provera…</dd></div><div><dt>Skladište</dt><dd id="storage-usage">Provera…</dd></div></dl>
+      <section><h3>Instalirani moduli</h3><p>Safety Engine · Voice Copilot · Trip Recorder · Route Planner · Anchor Watch · Man Overboard</p></section>
+      <section><h3>Mogućnosti pregledača</h3><p id="browser-capabilities">Provera…</p></section>
+      <section><h3>Zdravlje skladišta</h3><div class="storage-actions"><button id="clear-cache" type="button">Očisti keš</button><button id="clear-logs" type="button">Očisti logove</button><button id="clear-routes" type="button">Očisti rute</button><button id="clear-trips" type="button">Očisti vožnje</button></div></section>
+      <p><strong>Licenca:</strong> pogledajte licencu projekta u repozitorijumu.</p>
+      <p class="disclaimer">SafeBoat je pomoćni alat. Ne zamenjuje zvanične nautičke karte, propise, sigurnosnu opremu, nadzor plovila, VHF radio, hitne službe ni procenu skipera.</p>
+    </div>
   </dialog>
 
   <dialog id="emergency-call-dialog" aria-labelledby="emergency-call-title"><div class="dialog-card">
@@ -160,6 +159,7 @@
   </dialog>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+  <script src="js/core.js"></script>
   <script src="js/map.js"></script>
   <script src="js/gps.js"></script>
   <script src="js/safety.js"></script>

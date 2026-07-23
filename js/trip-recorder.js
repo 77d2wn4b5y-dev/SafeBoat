@@ -69,8 +69,14 @@
     ui.points.textContent = trip ? trip.points.length : 0;
     ui.start.hidden = state !== 'IDLE'; ui.pause.hidden = state !== 'RECORDING'; ui.resume.hidden = state !== 'PAUSED'; ui.stop.hidden = state === 'IDLE';
     renderActiveRoute();
+    scheduleClock();
   }
-  async function requestWakeLock() { if (!navigator.wakeLock || state !== 'RECORDING' || wakeLock) return; try { wakeLock = await navigator.wakeLock.request('screen'); wakeLock.addEventListener('release', () => { wakeLock = null; }); } catch (_) { wakeLock = null; } }
+  function scheduleClock() {
+    if (timer) window.clearTimeout(timer);
+    timer = null;
+    if (state === 'RECORDING' && !document.hidden) timer = window.setTimeout(render, 1000);
+  }
+  async function requestWakeLock() { if (!navigator.wakeLock || state !== 'RECORDING' || wakeLock) return; try { wakeLock = await navigator.wakeLock.request('screen'); wakeLock.addEventListener('release', () => { wakeLock = null; }); } catch (error) { wakeLock = null; if (window.SafeBoat) window.SafeBoat.logger.warn('Wake Lock nije dostupan', error.message); } }
   async function releaseWakeLock() { if (!wakeLock) return; const lock = wakeLock; wakeLock = null; try { await lock.release(); } catch (_) { /* already released */ } }
   function start() {
     if (state !== 'IDLE') return false;
@@ -159,8 +165,8 @@
     restore(); if (!ui.panel) return window.SafeBoatTrip;
     ui.start.addEventListener('click', start); ui.pause.addEventListener('click', pause); ui.resume.addEventListener('click', resume); ui.stop.addEventListener('click', stop); document.querySelector('#logbook-open').addEventListener('click', () => { renderLogbook(); ui.dialog.showModal(); }); document.querySelector('#logbook-close').addEventListener('click', () => ui.dialog.close()); ui.hideRoute.addEventListener('click', hideSavedRoute); ui.clear.addEventListener('click', () => { if (trips.length && window.confirm('Obrisati sve sačuvane vožnje?')) clearTrips(); });
     window.addEventListener('safeboat:safety-alert', event => { const detail = event.detail || {}; if (!activeTrip || state !== 'RECORDING' || !['WARNING', 'DANGER'].includes(detail.level) || !lastPosition) return; activeTrip.events.push({ type: 'SAFETY_ALERT', level: detail.level, hazardName: String(detail.hazardName || 'Nepoznata opasnost'), distance: Number(detail.distance) || 0, timestamp: detail.timestamp || Date.now(), latitude: lastPosition.latitude, longitude: lastPosition.longitude }); persistActive(); });
-    document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible' && state === 'RECORDING') requestWakeLock(); });
-    timer = window.setInterval(render, 1000); render(); renderLogbook(); return window.SafeBoatTrip;
+    document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible' && state === 'RECORDING') { requestWakeLock(); render(); } else scheduleClock(); });
+    render(); renderLogbook(); return window.SafeBoatTrip;
   }
   window.SafeBoatTrip = { init, start, pause, resume, stop, updatePosition, addEvent, isRecording, isPaused, getCurrentTrip, getTrips, deleteTrip, clearTrips, exportTripGeoJSON };
 }());

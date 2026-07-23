@@ -2,12 +2,13 @@
   'use strict';
 
   const SITHONIA = [40.19, 23.79];
-  const map = L.map('map', { zoomControl: false }).setView(SITHONIA, 12);
+  const map = L.map('map', { zoomControl: false, preferCanvas: true, zoomAnimation: !matchMedia('(prefers-reduced-motion: reduce)').matches, markerZoomAnimation: !matchMedia('(prefers-reduced-motion: reduce)').matches }).setView(SITHONIA, 12);
 
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  const tiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
   }).addTo(map);
+  tiles.on('tileerror', () => window.SafeBoat && window.SafeBoat.logger.warn('Pozadinska mapa trenutno nije dostupna'));
   L.control.zoom({ position: 'bottomright' }).addTo(map);
 
   const labels = {
@@ -50,6 +51,14 @@
 
   window.SafeBoatMap = {
     map,
-    loadAllLayers() { return Promise.all(Object.keys(labels).map(loadLayer)); }
+    async loadAllLayers() {
+      const results = await Promise.allSettled(Object.keys(labels).map(loadLayer));
+      const failed = results.filter(result => result.status === 'rejected');
+      if (failed.length === results.length) throw new Error('Tačke na mapi trenutno nisu dostupne.');
+      if (failed.length && window.SafeBoat) window.SafeBoat.logger.warn(`${failed.length} slojeva mape nije učitano`);
+      return results;
+    }
   };
+  let resizeFrame = null;
+  window.addEventListener('resize', () => { if (resizeFrame) cancelAnimationFrame(resizeFrame); resizeFrame = requestAnimationFrame(() => { resizeFrame = null; map.invalidateSize({ pan: false, debounceMoveend: true }); }); }, { passive: true });
 }());

@@ -44,3 +44,14 @@
 - Voice Copilot je proširen hitnim Anchor Watch i MOB porukama.
 - Trip Recorder beleži Anchor Watch upozorenja i MOB događaje u aktivnoj vožnji.
 - Dodate su pristupačne i zaštićene kontrole hitnih funkcija.
+
+## v0.10.0 — Polish & Reliability
+
+- Poboljšane su performanse mape, markera, linija i DOM osvežavanja.
+- Smanjena je potrošnja baterije pauziranjem nepotrebnog rada kada je ekran skriven ili funkcija nije aktivna.
+- Dodat je kompletan svetli i tamni režim sa sistemskim i ručnim izborom.
+- Objedinjena su podešavanja za GPS, glas, navigaciju, vožnje, Anchor Watch i izgled.
+- Poboljšani su pristupačnost, fokus, tastaturna navigacija, dodirne kontrole i smanjeno kretanje.
+- Poboljšani su offline pokretanje, upravljanje kešom i automatsko uklanjanje starih keševa.
+- Dodat je lagani interni logger i upravljanje zdravljem skladišta.
+- Očišćen je kod i ispravljene su greške bez promene postojećih javnih API-ja.
