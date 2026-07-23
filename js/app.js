@@ -46,6 +46,7 @@
     document.querySelector('#distance').textContent = (latlng.distanceTo(home) / 1852).toFixed(2);
     state.innerHTML = '<i></i> GPS aktivan';
     state.classList.add('active');
+    window.SafeBoatSafety.updatePosition(event).catch(error => showMessage(`Safety greška: ${error.message}`));
   }
 
   locateButton.addEventListener('click', () => {
@@ -70,5 +71,10 @@
   });
 
   window.SafeBoatMap.loadAllLayers().catch(error => showMessage(`Neke tačke nisu učitane: ${error.message}`));
+  window.SafeBoatSafety.init().catch(error => showMessage(`Safety modul nije učitan: ${error.message}`));
+  window.addEventListener('safeboat:safety-alert', event => {
+    const alert = event.detail;
+    showMessage(`${alert.level}: ${alert.hazardName} — ${alert.distance} m`);
+  });
   if ('serviceWorker' in navigator) window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js'));
 }());
