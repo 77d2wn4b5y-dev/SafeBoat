@@ -24,3 +24,13 @@
 - Dodati su prikaz aktivnih i sačuvanih ruta na mapi i GeoJSON izvoz.
 - Omogućena je obnova prekinutog snimanja u pauziranom stanju.
 - Safety WARNING i DANGER alerti beleže se kao događaji u aktivnoj vožnji.
+
+## v0.8.0 — Route Planner & Navigation
+
+- Dodato je planiranje rute pomoću tačaka na mapi.
+- Dodata je aktivna navigacija sa kursom i udaljenošću do sledeće tačke.
+- Dodati su ETA i ukupna preostala udaljenost.
+- Dodata su upozorenja o odstupanju od rute i pouzdana detekcija dolaska na tačku.
+- Dodato je lokalno čuvanje ruta i GeoJSON uvoz i izvoz.
+- Dodata je provera koridora rute u odnosu na poznate opasnosti.
+- Voice Copilot je proširen glasovnim navođenjem duž rute.
