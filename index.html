@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#06283d">
-  <meta name="application-version" content="0.4.1">
+  <meta name="application-version" content="0.5.0">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <title>SafeBoat — Sitonija</title>
@@ -17,7 +17,7 @@
 
   <header class="panel header-panel">
     <div>
-      <strong class="brand">⚓ SafeBoat <small>v0.4.1</small></strong>
+      <strong class="brand">⚓ SafeBoat <small>v0.5.0</small></strong>
       <span class="subtitle">Sitonija</span>
     </div>
     <span id="gps-state" class="status" aria-live="polite"><i></i> GPS nije aktivan</span>
@@ -35,11 +35,26 @@
     <div><b id="distance">0.00</b><span>NM do početka</span></div>
   </aside>
 
+  <section id="safety-panel" class="panel safety-panel" data-level="SAFE" aria-label="Bezbednosni podaci">
+    <div class="safety-heading"><span>Bezbednost</span><strong id="safety-status">SAFE</strong></div>
+    <dl>
+      <div><dt>Najbliža opasnost</dt><dd id="safety-hazard">Učitavanje…</dd></div>
+      <div><dt>Udaljenost</dt><dd id="safety-distance">—</dd></div>
+      <div><dt>GPS preciznost</dt><dd id="safety-accuracy">—</dd></div>
+      <div><dt>Kretanje</dt><dd id="safety-approach">Nepoznato</dd></div>
+    </dl>
+    <div class="safety-actions">
+      <button id="safety-toggle" type="button" aria-pressed="true">🛡️ Safety ON</button>
+      <button id="safety-test" type="button">🧪 Test alerta</button>
+    </div>
+  </section>
+
   <div id="message" class="message" role="status" aria-live="polite"></div>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
   <script src="js/map.js"></script>
   <script src="js/gps.js"></script>
+  <script src="js/safety.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>
