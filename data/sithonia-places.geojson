@@ -1,0 +1,1825 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "name": "SafeBoat Sithonia Places",
+    "version": "1.0.0",
+    "updatedAt": "2026-07-23",
+    "coverage": "Sithonia, Halkidiki, Greece",
+    "disclaimer": "Podaci o lokacijama služe za planiranje i informisanje. Ne predstavljaju zvaničnu nautičku kartu i ne potvrđuju dubinu, bezbednost prilaza, stanje mora niti pogodnost za sidrenje."
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "nikiti-beach",
+        "name": "Nikiti Beach",
+        "name_el": "Νικήτη",
+        "name_sr": "Nikiti Beach",
+        "category": "beach",
+        "area": "Nikiti",
+        "description_sr": "Peščana obala kod Nikitija.",
+        "description_en": null,
+        "description_el": null,
+        "shore_type": "unknown",
+        "seabed": null,
+        "anchoring": "unknown",
+        "approach_note": null,
+        "shelter_from": [],
+        "exposed_to": [],
+        "facilities": [],
+        "access": [],
+        "family_friendly": null,
+        "boat_access": "unknown",
+        "verified": false,
+        "source": null,
+        "source_date": null,
+        "last_reviewed": null,
+        "coast": "west",
+        "major": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          23.6688,
+          40.2202
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "nikiti-port",
+        "name": "Nikiti Port",
+        "name_el": "Λιμάνι Νικήτης",
+        "name_sr": "Nikiti Port",
+        "category": "port",
+        "area": "Nikiti",
+        "description_sr": "Luka u obalnom delu Nikitija.",
+        "description_en": null,
+        "description_el": null,
+        "shore_type": "unknown",
+        "seabed": null,
+        "anchoring": "unknown",
+        "approach_note": null,
+        "shelter_from": [],
+        "exposed_to": [],
+        "facilities": [],
+        "access": [],
+        "family_friendly": null,
+        "boat_access": "unknown",
+        "verified": false,
+        "source": null,
+        "source_date": null,
+        "last_reviewed": null,
+        "coast": "west",
+        "major": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          23.666,
+          40.2227
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "agios-ioannis-beach",
+        "name": "Agios Ioannis Beach",
+        "name_el": "Άγιος Ιωάννης",
+        "name_sr": "Agios Ioannis Beach",
+        "category": "beach",
+        "area": "Agios Ioannis",
+        "description_sr": "Plaža Agios Ioannis.",
+        "description_en": null,
+        "description_el": null,
+        "shore_type": "unknown",
+        "seabed": null,
+        "anchoring": "unknown",
+        "approach_note": null,
+        "shelter_from": [],
+        "exposed_to": [],
+        "facilities": [],
+        "access": [],
+        "family_friendly": null,
+        "boat_access": "unknown",
+        "verified": false,
+        "source": null,
+        "source_date": null,
+        "last_reviewed": null,
+        "coast": "west",
+        "major": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          23.689,
+          40.1905
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "kastri-beach",
+        "name": "Kastri Beach",
+        "name_el": "Καστρί",
+        "name_sr": "Kastri Beach",
+        "category": "beach",
+        "area": "Kastri",
+        "description_sr": "Manja plaža kod Kastri zaliva.",
+        "description_en": null,
+        "description_el": null,
+        "shore_type": "unknown",
+        "seabed": null,
+        "anchoring": "unknown",
+        "approach_note": null,
+        "shelter_from": [],
+        "exposed_to": [],
+        "facilities": [],
+        "access": [],
+        "family_friendly": null,
+        "boat_access": "unknown",
+        "verified": false,
+        "source": null,
+        "source_date": null,
+        "last_reviewed": null,
+        "coast": "west",
+        "major": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          23.695,
+          40.1818
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "kalogria-beach",
+        "name": "Kalogria Beach",
+        "name_el": "Καλογριά",
+        "name_sr": "Kalogria Beach",
+        "category": "beach",
+        "area": "Kalogria",
+        "description_sr": "Poznata plaža zapadne Sitonije.",
+        "description_en": null,
+        "description_el": null,
+        "shore_type": "unknown",
+        "seabed": null,
+        "anchoring": "unknown",
+        "approach_note": null,
+        "shelter_from": [],
+        "exposed_to": [],
+        "facilities": [],
+        "access": [],
+        "family_friendly": null,
+        "boat_access": "unknown",
+        "verified": false,
+        "source": null,
+        "source_date": null,
+        "last_reviewed": null,
+        "coast": "west",
+        "major": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          23.7047,
+          40.1673
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "spathies-beach",
+        "name": "Spathies Beach",
+        "name_el": "Σπαθιές",
+        "name_sr": "Spathies Beach",
+        "category": "beach",
+        "area": "Spathies",
+        "description_sr": "Obalna lokacija Spathies.",
+        "description_en": null,
+        "description_el": null,
+        "shore_type": "unknown",
+        "seabed": null,
+        "anchoring": "unknown",
+        "approach_note": null,
+        "shelter_from": [],
+        "exposed_to": [],
+        "facilities": [],
+        "access": [],
+        "family_friendly": null,
+        "boat_access": "unknown",
+        "verified": false,
+        "source": null,
+        "source_date": null,
+        "last_reviewed": null,
+        "coast": "west",
+        "major": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          23.7114,
+          40.1582
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "elia-beach",
+        "name": "Elia Beach",
+        "name_el": "Ελιά",
+        "name_sr": "Elia Beach",
+        "category": "beach",
+        "area": "Elia",
+        "description_sr": "Duga obala u oblasti Elia.",
+        "description_en": null,
+        "description_el": null,
+        "shore_type": "unknown",
+        "seabed": null,
+        "anchoring": "unknown",
+        "approach_note": null,
+        "shelter_from": [],
+        "exposed_to": [],
+        "facilities": [],
+        "access": [],
+        "family_friendly": null,
+        "boat_access": "unknown",
+        "verified": false,
+        "source": null,
+        "source_date": null,
+        "last_reviewed": null,
+        "coast": "west",
+        "major": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          23.72,
+          40.145
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "lagomandra-beach",
+        "name": "Lagomandra Beach",
+        "name_el": "Λαγόμανδρα",
+        "name_sr": "Lagomandra Beach",
+        "category": "beach",
+        "area": "Lagomandra",
+        "description_sr": "Plaža Lagomandra.",
+        "description_en": null,
+        "description_el": null,
+        "shore_type": "unknown",
+        "seabed": null,
+        "anchoring": "unknown",
+        "approach_note": null,
+        "shelter_from": [],
+        "exposed_to": [],
+        "facilities": [],
+        "access": [],
+        "family_friendly": null,
+        "boat_access": "unknown",
+        "verified": false,
+        "source": null,
+        "source_date": null,
+        "last_reviewed": null,
+        "coast": "west",
+        "major": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          23.7285,
+          40.123
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "tripotamos-beach",
+        "name": "Tripotamos Beach",
+        "name_el": "Τριπόταμος",
+        "name_sr": "Tripotamos Beach",
+        "category": "beach",
+        "area": "Tripotamos",
+        "description_sr": "Obalna lokacija Tripotamos.",
+        "description_en": null,
+        "description_el": null,
+        "shore_type": "unknown",
+        "seabed": null,
+        "anchoring": "unknown",
+        "approach_note": null,
+        "shelter_from": [],
+        "exposed_to": [],
+        "facilities": [],
+        "access": [],
+        "family_friendly": null,
+        "boat_access": "unknown",
+        "verified": false,
+        "source": null,
+        "source_date": null,
+        "last_reviewed": null,
+        "coast": "west",
+        "major": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          23.7385,
+          40.106
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "neos-marmaras-port",
+        "name": "Neos Marmaras Port",
+        "name_el": "Λιμάνι Νέου Μαρμαρά",
+        "name_sr": "Neos Marmaras Port",
+        "category": "port",
+        "area": "Neos Marmaras",
+        "description_sr": "Luka u Neos Marmarasu.",
+        "description_en": null,
+        "description_el": null,
+        "shore_type": "unknown",
+        "seabed": null,
+        "anchoring": "unknown",
+        "approach_note": null,
+        "shelter_from": [],
+        "exposed_to": [],
+        "facilities": [],
+        "access": [],
+        "family_friendly": null,
+        "boat_access": "unknown",
+        "verified": false,
+        "source": null,
+        "source_date": null,
+        "last_reviewed": null,
+        "coast": "west",
+        "major": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          23.7833,
+          40.0936
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "paradisos-beach",
+        "name": "Paradisos Beach",
+        "name_el": "Παράδεισος",
+        "name_sr": "Paradisos Beach",
+        "category": "beach",
+        "area": "Neos Marmaras",
+        "description_sr": "Plaža severno od Neos Marmarasa.",
+        "description_en": null,
+        "description_el": null,
+        "shore_type": "unknown",
+        "seabed": null,
+        "anchoring": "unknown",
+        "approach_note": null,
+        "shelter_from": [],
+        "exposed_to": [],
+        "facilities": [],
+        "access": [],
+        "family_friendly": null,
+        "boat_access": "unknown",
+        "verified": false,
+        "source": null,
+        "source_date": null,
+        "last_reviewed": null,
+        "coast": "west",
+        "major": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          23.777,
+          40.1044
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "porto-carras-marina",
+        "name": "Porto Carras Marina",
+        "name_el": "Μαρίνα Πόρτο Καρράς",
+        "name_sr": "Porto Carras Marina",
+        "category": "marina",
+        "area": "Porto Carras",
+        "description_sr": "Marina u kompleksu Porto Carras; proverite aktuelne usluge direktno.",
+        "description_en": null,
+        "description_el": null,
+        "shore_type": "unknown",
+        "seabed": null,
+        "anchoring": "unknown",
+        "approach_note": null,
+        "shelter_from": [],
+        "exposed_to": [],
+        "facilities": [],
+        "access": [],
+        "family_friendly": null,
+        "boat_access": "unknown",
+        "verified": false,
+        "source": null,
+        "source_date": null,
+        "last_reviewed": null,
+        "coast": "west",
+        "major": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          23.7902,
+          40.0803
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "porto-carras-coast",
+        "name": "Porto Carras Coast",
+        "name_el": "Πόρτο Καρράς",
+        "name_sr": "Porto Carras Coast",
+        "category": "landmark",
+        "area": "Porto Carras",
+        "description_sr": "Orijentaciona obalna lokacija Porto Carras.",
+        "description_en": null,
+        "description_el": null,
+        "shore_type": "unknown",
+        "seabed": null,
+        "anchoring": "unknown",
+        "approach_note": null,
+        "shelter_from": [],
+        "exposed_to": [],
+        "facilities": [],
+        "access": [],
+        "family_friendly": null,
+        "boat_access": "unknown",
+        "verified": false,
+        "source": null,
+        "source_date": null,
+        "last_reviewed": null,
+        "coast": "west",
+        "major": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          23.789,
+          40.073
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "toroni-beach",
+        "name": "Toroni Beach",
+        "name_el": "Τορώνη",
+        "name_sr": "Toroni Beach",
+        "category": "beach",
+        "area": "Toroni",
+        "description_sr": "Duga obala kod Toronija.",
+        "description_en": null,
+        "description_el": null,
+        "shore_type": "unknown",
+        "seabed": null,
+        "anchoring": "unknown",
+        "approach_note": null,
+        "shelter_from": [],
+        "exposed_to": [],
+        "facilities": [],
+        "access": [],
+        "family_friendly": null,
+        "boat_access": "unknown",
+        "verified": false,
+        "source": null,
+        "source_date": null,
+        "last_reviewed": null,
+        "coast": "west",
+        "major": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          23.897,
+          39.9868
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "toroni-harbour",
+        "name": "Toroni Harbour",
+        "name_el": "Λιμάνι Τορώνης",
+        "name_sr": "Toroni Harbour",
+        "category": "port",
+        "area": "Toroni",
+        "description_sr": "Mala luka u oblasti Toroni.",
+        "description_en": null,
+        "description_el": null,
+        "shore_type": "unknown",
+        "seabed": null,
+        "anchoring": "unknown",
+        "approach_note": null,
+        "shelter_from": [],
+        "exposed_to": [],
+        "facilities": [],
+        "access": [],
+        "family_friendly": null,
+        "boat_access": "unknown",
+        "verified": false,
+        "source": null,
+        "source_date": null,
+        "last_reviewed": null,
+        "coast": "west",
+        "major": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          23.904,
+          39.9834
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "tristinika-beach",
+        "name": "Tristinika Beach",
+        "name_el": "Τριστινίκα",
+        "name_sr": "Tristinika Beach",
+        "category": "beach",
+        "area": "Tristinika",
+        "description_sr": "Plaža Tristinika.",
+        "description_en": null,
+        "description_el": null,
+        "shore_type": "unknown",
+        "seabed": null,
+        "anchoring": "unknown",
+        "approach_note": null,
+        "shelter_from": [],
+        "exposed_to": [],
+        "facilities": [],
+        "access": [],
+        "family_friendly": null,
+        "boat_access": "unknown",
+        "verified": false,
+        "source": null,
+        "source_date": null,
+        "last_reviewed": null,
+        "coast": "west",
+        "major": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          23.8762,
+          40.0064
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "destenika-beach",
+        "name": "Destenika Beach",
+        "name_el": "Δεστενίκα",
+        "name_sr": "Destenika Beach",
+        "category": "beach",
+        "area": "Destenika",
+        "description_sr": "Plaža Destenika.",
+        "description_en": null,
+        "description_el": null,
+        "shore_type": "unknown",
+        "seabed": null,
+        "anchoring": "unknown",
+        "approach_note": null,
+        "shelter_from": [],
+        "exposed_to": [],
+        "facilities": [],
+        "access": [],
+        "family_friendly": null,
+        "boat_access": "unknown",
+        "verified": false,
+        "source": null,
+        "source_date": null,
+        "last_reviewed": null,
+        "coast": "west",
+        "major": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          23.868,
+          40.0135
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "aretes-beach",
+        "name": "Aretes Beach",
+        "name_el": "Αρετές",
+        "name_sr": "Aretes Beach",
+        "category": "beach",
+        "area": "Aretes",
+        "description_sr": "Plaža u oblasti Aretes.",
+        "description_en": null,
+        "description_el": null,
+        "shore_type": "unknown",
+        "seabed": null,
+        "anchoring": "unknown",
+        "approach_note": null,
+        "shelter_from": [],
+        "exposed_to": [],
+        "facilities": [],
+        "access": [],
+        "family_friendly": null,
+        "boat_access": "unknown",
+        "verified": false,
+        "source": null,
+        "source_date": null,
+        "last_reviewed": null,
+        "coast": "west",
+        "major": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          23.8505,
+          40.0255
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "porto-koufo-port",
+        "name": "Porto Koufo Port",
+        "name_el": "Πόρτο Κουφό",
+        "name_sr": "Porto Koufo Port",
+        "category": "port",
+        "area": "Porto Koufo",
+        "description_sr": "Luka u prirodnom zalivu Porto Koufo.",
+        "description_en": null,
+        "description_el": null,
+        "shore_type": "unknown",
+        "seabed": null,
+        "anchoring": "unknown",
+        "approach_note": null,
+        "shelter_from": [],
+        "exposed_to": [],
+        "facilities": [],
+        "access": [],
+        "family_friendly": null,
+        "boat_access": "unknown",
+        "verified": false,
+        "source": null,
+        "source_date": null,
+        "last_reviewed": null,
+        "coast": "west",
+        "major": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          23.9185,
+          39.97
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "porto-koufo-bay",
+        "name": "Porto Koufo Bay",
+        "name_el": "Κόλπος Πόρτο Κουφό",
+        "name_sr": "Porto Koufo Bay",
+        "category": "anchorage",
+        "area": "Porto Koufo",
+        "description_sr": "Lokacija zaliva označena kao sidrište; pogodnost nije potvrđena.",
+        "description_en": null,
+        "description_el": null,
+        "shore_type": "unknown",
+        "seabed": null,
+        "anchoring": "unknown",
+        "approach_note": null,
+        "shelter_from": [],
+        "exposed_to": [],
+        "facilities": [],
+        "access": [],
+        "family_friendly": null,
+        "boat_access": "unknown",
+        "verified": false,
+        "source": null,
+        "source_date": null,
+        "last_reviewed": null,
+        "coast": "west",
+        "major": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          23.9235,
+          39.966
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ormos-panagias-port",
+        "name": "Ormos Panagias Port",
+        "name_el": "Όρμος Παναγίας",
+        "name_sr": "Ormos Panagias Port",
+        "category": "port",
+        "area": "Ormos Panagias",
+        "description_sr": "Luka u Ormos Panagiasu.",
+        "description_en": null,
+        "description_el": null,
+        "shore_type": "unknown",
+        "seabed": null,
+        "anchoring": "unknown",
+        "approach_note": null,
+        "shelter_from": [],
+        "exposed_to": [],
+        "facilities": [],
+        "access": [],
+        "family_friendly": null,
+        "boat_access": "unknown",
+        "verified": false,
+        "source": null,
+        "source_date": null,
+        "last_reviewed": null,
+        "coast": "east",
+        "major": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          23.7275,
+          40.2358
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "trani-ammouda-beach",
+        "name": "Trani Ammouda Beach",
+        "name_el": "Τρανή Αμμούδα",
+        "name_sr": "Trani Ammouda Beach",
+        "category": "beach",
+        "area": "Ormos Panagias",
+        "description_sr": "Duga plaža Trani Ammouda.",
+        "description_en": null,
+        "description_el": null,
+        "shore_type": "unknown",
+        "seabed": null,
+        "anchoring": "unknown",
+        "approach_note": null,
+        "shelter_from": [],
+        "exposed_to": [],
+        "facilities": [],
+        "access": [],
+        "family_friendly": null,
+        "boat_access": "unknown",
+        "verified": false,
+        "source": null,
+        "source_date": null,
+        "last_reviewed": null,
+        "coast": "east",
+        "major": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          23.7215,
+          40.2492
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "lagonisi-beach",
+        "name": "Lagonisi Beach",
+        "name_el": "Λαγονήσι",
+        "name_sr": "Lagonisi Beach",
+        "category": "beach",
+        "area": "Ormos Panagias",
+        "description_sr": "Plaža Lagonisi.",
+        "description_en": null,
+        "description_el": null,
+        "shore_type": "unknown",
+        "seabed": null,
+        "anchoring": "unknown",
+        "approach_note": null,
+        "shelter_from": [],
+        "exposed_to": [],
+        "facilities": [],
+        "access": [],
+        "family_friendly": null,
+        "boat_access": "unknown",
+        "verified": false,
+        "source": null,
+        "source_date": null,
+        "last_reviewed": null,
+        "coast": "east",
+        "major": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          23.7445,
+          40.2285
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "latoura-beach",
+        "name": "Latoura Beach",
+        "name_el": "Λατούρα",
+        "name_sr": "Latoura Beach",
+        "category": "beach",
+        "area": "Ormos Panagias",
+        "description_sr": "Plaža Latoura.",
+        "description_en": null,
+        "description_el": null,
+        "shore_type": "unknown",
+        "seabed": null,
+        "anchoring": "unknown",
+        "approach_note": null,
+        "shelter_from": [],
+        "exposed_to": [],
+        "facilities": [],
+        "access": [],
+        "family_friendly": null,
+        "boat_access": "unknown",
+        "verified": false,
+        "source": null,
+        "source_date": null,
+        "last_reviewed": null,
+        "coast": "east",
+        "major": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          23.7382,
+          40.2312
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "talgo-beach",
+        "name": "Talgo Beach",
+        "name_el": "Τάλγκο",
+        "name_sr": "Talgo Beach",
+        "category": "beach",
+        "area": "Vourvourou",
+        "description_sr": "Obalna lokacija Talgo.",
+        "description_en": null,
+        "description_el": null,
+        "shore_type": "unknown",
+        "seabed": null,
+        "anchoring": "unknown",
+        "approach_note": null,
+        "shelter_from": [],
+        "exposed_to": [],
+        "facilities": [],
+        "access": [],
+        "family_friendly": null,
+        "boat_access": "unknown",
+        "verified": false,
+        "source": null,
+        "source_date": null,
+        "last_reviewed": null,
+        "coast": "east",
+        "major": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          23.7565,
+          40.215
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "karidi-beach",
+        "name": "Karidi Beach",
+        "name_el": "Καρύδι",
+        "name_sr": "Karidi Beach",
+        "category": "beach",
+        "area": "Vourvourou",
+        "description_sr": "Plaža Karidi kod Vourvouroua.",
+        "description_en": null,
+        "description_el": null,
+        "shore_type": "unknown",
+        "seabed": null,
+        "anchoring": "unknown",
+        "approach_note": null,
+        "shelter_from": [],
+        "exposed_to": [],
+        "facilities": [],
+        "access": [],
+        "family_friendly": null,
+        "boat_access": "unknown",
+        "verified": false,
+        "source": null,
+        "source_date": null,
+        "last_reviewed": null,
+        "coast": "east",
+        "major": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          23.809,
+          40.191
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "vourvourou-coast",
+        "name": "Vourvourou",
+        "name_el": "Βουρβουρού",
+        "name_sr": "Vourvourou",
+        "category": "landmark",
+        "area": "Vourvourou",
+        "description_sr": "Obalno naselje Vourvourou.",
+        "description_en": null,
+        "description_el": null,
+        "shore_type": "unknown",
+        "seabed": null,
+        "anchoring": "unknown",
+        "approach_note": null,
+        "shelter_from": [],
+        "exposed_to": [],
+        "facilities": [],
+        "access": [],
+        "family_friendly": null,
+        "boat_access": "unknown",
+        "verified": false,
+        "source": null,
+        "source_date": null,
+        "last_reviewed": null,
+        "coast": "east",
+        "major": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          23.8,
+          40.186
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "vourvourou-landing",
+        "name": "Vourvourou Boat Ramp",
+        "name_el": "Ράμπα Βουρβουρού",
+        "name_sr": "Vourvourou Boat Ramp",
+        "category": "boat_ramp",
+        "area": "Vourvourou",
+        "description_sr": "Evidentirana rampa; stanje i dostupnost nisu potvrđeni.",
+        "description_en": null,
+        "description_el": null,
+        "shore_type": "unknown",
+        "seabed": null,
+        "anchoring": "unknown",
+        "approach_note": null,
+        "shelter_from": [],
+        "exposed_to": [],
+        "facilities": [],
+        "access": [],
+        "family_friendly": null,
+        "boat_access": "unknown",
+        "verified": false,
+        "source": null,
+        "source_date": null,
+        "last_reviewed": null,
+        "coast": "east",
+        "major": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          23.798,
+          40.184
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "fava-beach",
+        "name": "Fava Beach",
+        "name_el": "Φάβα",
+        "name_sr": "Fava Beach",
+        "category": "beach",
+        "area": "Vourvourou",
+        "description_sr": "Plaža Fava.",
+        "description_en": null,
+        "description_el": null,
+        "shore_type": "unknown",
+        "seabed": null,
+        "anchoring": "unknown",
+        "approach_note": null,
+        "shelter_from": [],
+        "exposed_to": [],
+        "facilities": [],
+        "access": [],
+        "family_friendly": null,
+        "boat_access": "unknown",
+        "verified": false,
+        "source": null,
+        "source_date": null,
+        "last_reviewed": null,
+        "coast": "east",
+        "major": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          23.8175,
+          40.1815
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "livari-beach",
+        "name": "Livari Beach",
+        "name_el": "Λιβάρι",
+        "name_sr": "Livari Beach",
+        "category": "beach",
+        "area": "Vourvourou",
+        "description_sr": "Obalna lokacija Livari.",
+        "description_en": null,
+        "description_el": null,
+        "shore_type": "unknown",
+        "seabed": null,
+        "anchoring": "unknown",
+        "approach_note": null,
+        "shelter_from": [],
+        "exposed_to": [],
+        "facilities": [],
+        "access": [],
+        "family_friendly": null,
+        "boat_access": "unknown",
+        "verified": false,
+        "source": null,
+        "source_date": null,
+        "last_reviewed": null,
+        "coast": "east",
+        "major": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          23.7805,
+          40.205
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "zografou-beach",
+        "name": "Zografou Beach",
+        "name_el": "Ζωγράφου",
+        "name_sr": "Zografou Beach",
+        "category": "beach",
+        "area": "Zografou",
+        "description_sr": "Plaža u oblasti Zografou.",
+        "description_en": null,
+        "description_el": null,
+        "shore_type": "unknown",
+        "seabed": null,
+        "anchoring": "unknown",
+        "approach_note": null,
+        "shelter_from": [],
+        "exposed_to": [],
+        "facilities": [],
+        "access": [],
+        "family_friendly": null,
+        "boat_access": "unknown",
+        "verified": false,
+        "source": null,
+        "source_date": null,
+        "last_reviewed": null,
+        "coast": "east",
+        "major": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          23.85,
+          40.169
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "akti-koutloumousiou",
+        "name": "Akti Koutloumousiou",
+        "name_el": "Ακτή Κουτλουμουσίου",
+        "name_sr": "Akti Koutloumousiou",
+        "category": "beach",
+        "area": "Zografou",
+        "description_sr": "Obalna lokacija Akti Koutloumousiou.",
+        "description_en": null,
+        "description_el": null,
+        "shore_type": "unknown",
+        "seabed": null,
+        "anchoring": "unknown",
+        "approach_note": null,
+        "shelter_from": [],
+        "exposed_to": [],
+        "facilities": [],
+        "access": [],
+        "family_friendly": null,
+        "boat_access": "unknown",
+        "verified": false,
+        "source": null,
+        "source_date": null,
+        "last_reviewed": null,
+        "coast": "east",
+        "major": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          23.866,
+          40.158
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "sarti-beach",
+        "name": "Sarti Beach",
+        "name_el": "Σάρτη",
+        "name_sr": "Sarti Beach",
+        "category": "beach",
+        "area": "Sarti",
+        "description_sr": "Duga plaža kod Sartija.",
+        "description_en": null,
+        "description_el": null,
+        "shore_type": "unknown",
+        "seabed": null,
+        "anchoring": "unknown",
+        "approach_note": null,
+        "shelter_from": [],
+        "exposed_to": [],
+        "facilities": [],
+        "access": [],
+        "family_friendly": null,
+        "boat_access": "unknown",
+        "verified": false,
+        "source": null,
+        "source_date": null,
+        "last_reviewed": null,
+        "coast": "east",
+        "major": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          23.9805,
+          40.0945
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "sarti-harbour",
+        "name": "Sarti Harbour",
+        "name_el": "Λιμάνι Σάρτης",
+        "name_sr": "Sarti Harbour",
+        "category": "port",
+        "area": "Sarti",
+        "description_sr": "Mala luka u Sartiju.",
+        "description_en": null,
+        "description_el": null,
+        "shore_type": "unknown",
+        "seabed": null,
+        "anchoring": "unknown",
+        "approach_note": null,
+        "shelter_from": [],
+        "exposed_to": [],
+        "facilities": [],
+        "access": [],
+        "family_friendly": null,
+        "boat_access": "unknown",
+        "verified": false,
+        "source": null,
+        "source_date": null,
+        "last_reviewed": null,
+        "coast": "east",
+        "major": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          23.978,
+          40.0977
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "achlada-beach",
+        "name": "Achlada Beach",
+        "name_el": "Αχλάδα",
+        "name_sr": "Achlada Beach",
+        "category": "beach",
+        "area": "Sarti",
+        "description_sr": "Obalna lokacija Achlada.",
+        "description_en": null,
+        "description_el": null,
+        "shore_type": "unknown",
+        "seabed": null,
+        "anchoring": "unknown",
+        "approach_note": null,
+        "shelter_from": [],
+        "exposed_to": [],
+        "facilities": [],
+        "access": [],
+        "family_friendly": null,
+        "boat_access": "unknown",
+        "verified": false,
+        "source": null,
+        "source_date": null,
+        "last_reviewed": null,
+        "coast": "east",
+        "major": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          23.976,
+          40.109
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "platanitsi-beach",
+        "name": "Platanitsi Beach",
+        "name_el": "Πλατανίτσι",
+        "name_sr": "Platanitsi Beach",
+        "category": "beach",
+        "area": "Sarti",
+        "description_sr": "Plaža Platanitsi.",
+        "description_en": null,
+        "description_el": null,
+        "shore_type": "unknown",
+        "seabed": null,
+        "anchoring": "unknown",
+        "approach_note": null,
+        "shelter_from": [],
+        "exposed_to": [],
+        "facilities": [],
+        "access": [],
+        "family_friendly": null,
+        "boat_access": "unknown",
+        "verified": false,
+        "source": null,
+        "source_date": null,
+        "last_reviewed": null,
+        "coast": "east",
+        "major": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          23.9735,
+          40.121
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "kavourotrypes-beach",
+        "name": "Kavourotrypes Beach",
+        "name_el": "Καβουρότρυπες",
+        "name_sr": "Kavourotrypes Beach",
+        "category": "beach",
+        "area": "Sarti",
+        "description_sr": "Stenovita i peščana obalna lokacija Kavourotrypes.",
+        "description_en": null,
+        "description_el": null,
+        "shore_type": "unknown",
+        "seabed": null,
+        "anchoring": "unknown",
+        "approach_note": null,
+        "shelter_from": [],
+        "exposed_to": [],
+        "facilities": [],
+        "access": [],
+        "family_friendly": null,
+        "boat_access": "unknown",
+        "verified": false,
+        "source": null,
+        "source_date": null,
+        "last_reviewed": null,
+        "coast": "east",
+        "major": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          23.966,
+          40.1278
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "orange-beach",
+        "name": "Orange Beach",
+        "name_el": "Πορτοκαλί",
+        "name_sr": "Orange Beach",
+        "category": "beach",
+        "area": "Sarti",
+        "description_sr": "Plaža poznata i kao Orange Beach.",
+        "description_en": null,
+        "description_el": null,
+        "shore_type": "unknown",
+        "seabed": null,
+        "anchoring": "unknown",
+        "approach_note": null,
+        "shelter_from": [],
+        "exposed_to": [],
+        "facilities": [],
+        "access": [],
+        "family_friendly": null,
+        "boat_access": "unknown",
+        "verified": false,
+        "source": null,
+        "source_date": null,
+        "last_reviewed": null,
+        "coast": "east",
+        "major": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          23.963,
+          40.1305
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "armenistis-beach",
+        "name": "Armenistis Beach",
+        "name_el": "Αρμενιστής",
+        "name_sr": "Armenistis Beach",
+        "category": "beach",
+        "area": "Armenistis",
+        "description_sr": "Plaža Armenistis.",
+        "description_en": null,
+        "description_el": null,
+        "shore_type": "unknown",
+        "seabed": null,
+        "anchoring": "unknown",
+        "approach_note": null,
+        "shelter_from": [],
+        "exposed_to": [],
+        "facilities": [],
+        "access": [],
+        "family_friendly": null,
+        "boat_access": "unknown",
+        "verified": false,
+        "source": null,
+        "source_date": null,
+        "last_reviewed": null,
+        "coast": "east",
+        "major": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          23.91,
+          40.153
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "kalamitsi-beach",
+        "name": "Kalamitsi Beach",
+        "name_el": "Καλαμίτσι",
+        "name_sr": "Kalamitsi Beach",
+        "category": "beach",
+        "area": "Kalamitsi",
+        "description_sr": "Plaža u Kalamitsiju.",
+        "description_en": null,
+        "description_el": null,
+        "shore_type": "unknown",
+        "seabed": null,
+        "anchoring": "unknown",
+        "approach_note": null,
+        "shelter_from": [],
+        "exposed_to": [],
+        "facilities": [],
+        "access": [],
+        "family_friendly": null,
+        "boat_access": "unknown",
+        "verified": false,
+        "source": null,
+        "source_date": null,
+        "last_reviewed": null,
+        "coast": "east",
+        "major": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          23.991,
+          39.992
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "kalamitsi-harbour",
+        "name": "Kalamitsi Harbour",
+        "name_el": "Λιμανάκι Καλαμιτσίου",
+        "name_sr": "Kalamitsi Harbour",
+        "category": "port",
+        "area": "Kalamitsi",
+        "description_sr": "Mala luka kod Kalamitsija.",
+        "description_en": null,
+        "description_el": null,
+        "shore_type": "unknown",
+        "seabed": null,
+        "anchoring": "unknown",
+        "approach_note": null,
+        "shelter_from": [],
+        "exposed_to": [],
+        "facilities": [],
+        "access": [],
+        "family_friendly": null,
+        "boat_access": "unknown",
+        "verified": false,
+        "source": null,
+        "source_date": null,
+        "last_reviewed": null,
+        "coast": "east",
+        "major": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          23.9945,
+          39.99
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "kriaritsi-beach",
+        "name": "Kriaritsi Beach",
+        "name_el": "Κριαρίτσι",
+        "name_sr": "Kriaritsi Beach",
+        "category": "beach",
+        "area": "Kriaritsi",
+        "description_sr": "Plaža Kriaritsi.",
+        "description_en": null,
+        "description_el": null,
+        "shore_type": "unknown",
+        "seabed": null,
+        "anchoring": "unknown",
+        "approach_note": null,
+        "shelter_from": [],
+        "exposed_to": [],
+        "facilities": [],
+        "access": [],
+        "family_friendly": null,
+        "boat_access": "unknown",
+        "verified": false,
+        "source": null,
+        "source_date": null,
+        "last_reviewed": null,
+        "coast": "east",
+        "major": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.0105,
+          39.998
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "klimataria-beach",
+        "name": "Klimataria Beach",
+        "name_el": "Κληματαριά",
+        "name_sr": "Klimataria Beach",
+        "category": "beach",
+        "area": "Sykia",
+        "description_sr": "Plaža Klimataria.",
+        "description_en": null,
+        "description_el": null,
+        "shore_type": "unknown",
+        "seabed": null,
+        "anchoring": "unknown",
+        "approach_note": null,
+        "shelter_from": [],
+        "exposed_to": [],
+        "facilities": [],
+        "access": [],
+        "family_friendly": null,
+        "boat_access": "unknown",
+        "verified": false,
+        "source": null,
+        "source_date": null,
+        "last_reviewed": null,
+        "coast": "east",
+        "major": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.012,
+          39.981
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "tigania-beach",
+        "name": "Tigania Beach",
+        "name_el": "Τηγάνια",
+        "name_sr": "Tigania Beach",
+        "category": "beach",
+        "area": "Sykia",
+        "description_sr": "Obalna lokacija Tigania.",
+        "description_en": null,
+        "description_el": null,
+        "shore_type": "unknown",
+        "seabed": null,
+        "anchoring": "unknown",
+        "approach_note": null,
+        "shelter_from": [],
+        "exposed_to": [],
+        "facilities": [],
+        "access": [],
+        "family_friendly": null,
+        "boat_access": "unknown",
+        "verified": false,
+        "source": null,
+        "source_date": null,
+        "last_reviewed": null,
+        "coast": "east",
+        "major": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.017,
+          39.973
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "tourkolimnionas-beach",
+        "name": "Tourkolimnionas Beach",
+        "name_el": "Τουρκολίμνιονας",
+        "name_sr": "Tourkolimnionas Beach",
+        "category": "beach",
+        "area": "Sykia",
+        "description_sr": "Plaža Tourkolimnionas.",
+        "description_en": null,
+        "description_el": null,
+        "shore_type": "unknown",
+        "seabed": null,
+        "anchoring": "unknown",
+        "approach_note": null,
+        "shelter_from": [],
+        "exposed_to": [],
+        "facilities": [],
+        "access": [],
+        "family_friendly": null,
+        "boat_access": "unknown",
+        "verified": false,
+        "source": null,
+        "source_date": null,
+        "last_reviewed": null,
+        "coast": "east",
+        "major": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.024,
+          39.969
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "sykia-beach",
+        "name": "Sykia Beach",
+        "name_el": "Παραλία Συκιάς",
+        "name_sr": "Sykia Beach",
+        "category": "beach",
+        "area": "Sykia",
+        "description_sr": "Obalna oblast Sykia.",
+        "description_en": null,
+        "description_el": null,
+        "shore_type": "unknown",
+        "seabed": null,
+        "anchoring": "unknown",
+        "approach_note": null,
+        "shelter_from": [],
+        "exposed_to": [],
+        "facilities": [],
+        "access": [],
+        "family_friendly": null,
+        "boat_access": "unknown",
+        "verified": false,
+        "source": null,
+        "source_date": null,
+        "last_reviewed": null,
+        "coast": "east",
+        "major": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          23.987,
+          40.038
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "sykia-harbour",
+        "name": "Sykia Coastal Harbour",
+        "name_el": "Λιμανάκι Συκιάς",
+        "name_sr": "Sykia Coastal Harbour",
+        "category": "port",
+        "area": "Sykia",
+        "description_sr": "Mala obalna luka u oblasti Sykia.",
+        "description_en": null,
+        "description_el": null,
+        "shore_type": "unknown",
+        "seabed": null,
+        "anchoring": "unknown",
+        "approach_note": null,
+        "shelter_from": [],
+        "exposed_to": [],
+        "facilities": [],
+        "access": [],
+        "family_friendly": null,
+        "boat_access": "unknown",
+        "verified": false,
+        "source": null,
+        "source_date": null,
+        "last_reviewed": null,
+        "coast": "east",
+        "major": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          23.992,
+          40.031
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "diaporos-island",
+        "name": "Diaporos Island",
+        "name_el": "Διάπορος",
+        "name_sr": "Diaporos Island",
+        "category": "landmark",
+        "area": "Vourvourou",
+        "description_sr": "Ostrvo naspram Vourvouroua; orijentaciona tačka.",
+        "description_en": null,
+        "description_el": null,
+        "shore_type": "unknown",
+        "seabed": null,
+        "anchoring": "unknown",
+        "approach_note": null,
+        "shelter_from": [],
+        "exposed_to": [],
+        "facilities": [],
+        "access": [],
+        "family_friendly": null,
+        "boat_access": "unknown",
+        "verified": false,
+        "source": null,
+        "source_date": null,
+        "last_reviewed": null,
+        "coast": "east",
+        "major": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          23.832,
+          40.176
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ammouliani-view",
+        "name": "Ammouliani Channel View",
+        "name_el": "Δίαυλος Αμμουλιανής",
+        "name_sr": "Ammouliani Channel View",
+        "category": "landmark",
+        "area": "Ormos Panagias",
+        "description_sr": "Orijentaciona obalna tačka na severoistoku Sitonije.",
+        "description_en": null,
+        "description_el": null,
+        "shore_type": "unknown",
+        "seabed": null,
+        "anchoring": "unknown",
+        "approach_note": null,
+        "shelter_from": [],
+        "exposed_to": [],
+        "facilities": [],
+        "access": [],
+        "family_friendly": null,
+        "boat_access": "unknown",
+        "verified": false,
+        "source": null,
+        "source_date": null,
+        "last_reviewed": null,
+        "coast": "east",
+        "major": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          23.704,
+          40.284
+        ]
+      }
+    }
+  ]
+}

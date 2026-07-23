@@ -1,13 +1,18 @@
-const CACHE = 'safeboat-v0.10.0';
+const CACHE = 'safeboat-v1.0.0';
 const APP_SHELL = [...new Set([
   './', './index.html', './styles.css', './manifest.webmanifest',
-  './js/core.js', './js/map.js', './js/gps.js', './js/safety.js', './js/voice-copilot.js', './js/trip-recorder.js', './js/route-planner.js', './js/emergency.js', './js/app.js',
-  './data/beaches.geojson', './data/rocks.geojson', './data/marinas.geojson', './data/fuel.geojson',
+  './js/core.js', './js/map.js', './js/gps.js', './js/safety.js', './js/voice-copilot.js', './js/trip-recorder.js', './js/route-planner.js', './js/emergency.js', './js/sithonia-guide.js', './js/app.js',
+  './data/beaches.geojson', './data/rocks.geojson', './data/marinas.geojson', './data/fuel.geojson', './data/sithonia-places.geojson',
   'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css', 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js'
 ])];
 
 self.addEventListener('install', event => {
-  event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(APP_SHELL)).then(() => self.skipWaiting()));
+  const localShell = APP_SHELL.filter(url => url.startsWith('./'));
+  const optionalRemote = APP_SHELL.filter(url => !url.startsWith('./'));
+  event.waitUntil(caches.open(CACHE).then(async cache => {
+    await cache.addAll(localShell);
+    await Promise.allSettled(optionalRemote.map(url => cache.add(url)));
+  }).then(() => self.skipWaiting()));
 });
 
 self.addEventListener('activate', event => {
