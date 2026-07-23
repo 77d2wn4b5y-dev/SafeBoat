@@ -55,3 +55,12 @@
 - Poboljšani su offline pokretanje, upravljanje kešom i automatsko uklanjanje starih keševa.
 - Dodat je lagani interni logger i upravljanje zdravljem skladišta.
 - Očišćen je kod i ispravljene su greške bez promene postojećih javnih API-ja.
+
+## v1.0.0 — Sithonia Edition
+
+- Offline vodič kroz plaže i obalna mesta Sitonije.
+- Luke, marine i eksplicitno označena sidrišta sa statusom izvora i verifikacije.
+- Offline pretraga, filteri, najbliže lokacije i lokalna omiljena mesta.
+- Integracija sa Planerom rute bez automatskog pokretanja navigacije ili prepisivanja rute.
+- Lokalni GeoJSON skup podataka i responzivni interfejs vodiča.
+- Prvo stabilno SafeBoat izdanje.
