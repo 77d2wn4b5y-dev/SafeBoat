@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#06283d">
-  <meta name="application-version" content="0.6.0">
+  <meta name="application-version" content="0.7.0">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <title>SafeBoat — Sitonija</title>
@@ -17,19 +17,31 @@
 
   <header class="panel header-panel">
     <div>
-      <strong class="brand">⚓ SafeBoat <small>v0.6.0</small></strong>
+      <strong class="brand">⚓ SafeBoat <small>v0.7.0</small></strong>
       <span class="subtitle">Sitonija</span>
     </div>
     <div class="header-tools">
       <span id="gps-state" class="status" aria-live="polite"><i></i> GPS nije aktivan</span>
       <button id="voice-toggle" class="icon-button" type="button" aria-label="Isključi glasovna upozorenja" aria-pressed="true">🔊</button>
       <button id="settings-open" class="icon-button" type="button" aria-label="Podešavanja">⚙️</button>
+      <button id="logbook-open" class="icon-button logbook-button" type="button" aria-label="Dnevnik vožnji">📒</button>
     </div>
   </header>
 
   <section class="panel controls" aria-label="Kontrole navigacije">
     <button id="locate" class="primary" type="button">◎ Moja lokacija</button>
     <button id="return-home" type="button" disabled>↩ Povratak na početnu tačku</button>
+  </section>
+
+  <section id="trip-panel" class="panel trip-panel" aria-label="Snimanje vožnje" data-state="IDLE">
+    <div class="trip-heading"><strong>Snimanje vožnje</strong><span id="trip-state">MIROVANJE</span></div>
+    <div class="trip-stats"><span><b id="trip-elapsed">00:00:00</b> vreme</span><span><b id="trip-distance">0.00</b> NM</span><span><b id="trip-max-speed">0.0</b> max čv</span><span><b id="trip-points">0</b> tačaka</span></div>
+    <div class="trip-actions">
+      <button id="trip-start" class="primary" type="button">▶ Snimi vožnju</button>
+      <button id="trip-pause" type="button" hidden>⏸ Pauziraj</button>
+      <button id="trip-resume" class="primary" type="button" hidden>▶ Nastavi</button>
+      <button id="trip-stop" type="button" hidden>■ Završi</button>
+    </div>
   </section>
 
   <aside class="panel telemetry" aria-label="GPS podaci">
@@ -72,7 +84,7 @@
 
   <dialog id="about-dialog" aria-labelledby="about-title">
     <form method="dialog" class="dialog-card">
-      <div class="dialog-heading"><h2 id="about-title">SafeBoat v0.6.0</h2><button class="dialog-close" value="close" aria-label="Zatvori">×</button></div>
+      <div class="dialog-heading"><h2 id="about-title">SafeBoat v0.7.0</h2><button class="dialog-close" value="close" aria-label="Zatvori">×</button></div>
       <p><strong>Voice Copilot</strong> daje glasovna, zvučna i vibraciona upozorenja na srpskom, engleskom i grčkom jeziku.</p>
       <p><strong>Safety Engine</strong> koristi postojeći GPS tok da proceni blizinu i smer kretanja ka opasnostima.</p>
       <p>Ažurirano: 23. jul 2026.</p>
@@ -80,11 +92,20 @@
     </form>
   </dialog>
 
+  <dialog id="logbook-dialog" aria-labelledby="logbook-title">
+    <div class="dialog-card logbook-card">
+      <div class="dialog-heading"><h2 id="logbook-title">📒 Dnevnik</h2><button id="logbook-close" class="dialog-close" type="button" aria-label="Zatvori">×</button></div>
+      <div id="logbook-list" class="logbook-list"></div>
+      <div class="logbook-footer"><button id="saved-route-hide" type="button" hidden>Sakrij rutu</button><button id="trips-clear" class="danger-button" type="button">Obriši sve vožnje</button></div>
+    </div>
+  </dialog>
+
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
   <script src="js/map.js"></script>
   <script src="js/gps.js"></script>
   <script src="js/safety.js"></script>
   <script src="js/voice-copilot.js"></script>
+  <script src="js/trip-recorder.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>

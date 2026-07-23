@@ -15,3 +15,12 @@
 - Dodata su podešavanja jezika i stanja glasovnih upozorenja.
 - Dodat je demo režim za INFO, WARNING i DANGER upozorenja.
 - Dodat je dijalog „O aplikaciji“ sa opisom i navigacionim upozorenjem.
+
+## v0.7.0 — Trip Recorder & Logbook
+
+- Dodato je snimanje rute sa pauziranjem i nastavkom vožnje.
+- Dodate su statistike udaljenosti, trajanja i brzine.
+- Dodat je lokalni dnevnik poslednjih 20 vožnji.
+- Dodati su prikaz aktivnih i sačuvanih ruta na mapi i GeoJSON izvoz.
+- Omogućena je obnova prekinutog snimanja u pauziranom stanju.
+- Safety WARNING i DANGER alerti beleže se kao događaji u aktivnoj vožnji.

@@ -1,9 +1,9 @@
-const CACHE = 'safeboat-v0.6.0';
+const CACHE = 'safeboat-v0.7.0';
 const APP_SHELL = [
   './', './index.html', './styles.css', './manifest.webmanifest',
-  './js/map.js', './js/gps.js', './js/safety.js', './js/voice-copilot.js', './js/app.js',
+  './js/map.js', './js/gps.js', './js/safety.js', './js/voice-copilot.js', './js/trip-recorder.js', './js/app.js',
   './data/beaches.geojson', './data/rocks.geojson',
-  './data/marinas.geojson', './data/fuel.geojson'
+  './data/marinas.geojson', './data/fuel.geojson', './CHANGELOG.md'
 ];
 
 self.addEventListener('install', event => {

@@ -163,6 +163,14 @@
     return announce({ level, hazardName: 'Test opasnosti', distance: distances[level] }, true);
   }
 
+  function speakStatus(text) {
+    if (!enabled || currentLevel || !text || !window.speechSynthesis || typeof window.SpeechSynthesisUtterance !== 'function') return false;
+    const utterance = new SpeechSynthesisUtterance(String(text));
+    utterance.lang = language;
+    try { window.speechSynthesis.speak(utterance); } catch (error) { return false; }
+    return true;
+  }
+
   function init() {
     updateUI();
     return window.SafeBoatVoice;
@@ -178,5 +186,5 @@
   if (voiceButton) voiceButton.addEventListener('click', () => enabled ? disable() : enable());
   if (languageSelect) languageSelect.addEventListener('change', event => setLanguage(event.target.value));
 
-  window.SafeBoatVoice = { init, enable, disable, isEnabled, setLanguage, getLanguage, announceTest, unlockAudio };
+  window.SafeBoatVoice = { init, enable, disable, isEnabled, setLanguage, getLanguage, announceTest, speakStatus, unlockAudio };
 }());
