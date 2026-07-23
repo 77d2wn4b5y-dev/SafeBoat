@@ -72,6 +72,17 @@
 
   window.SafeBoatMap.loadAllLayers().catch(error => showMessage(`Neke tačke nisu učitane: ${error.message}`));
   window.SafeBoatSafety.init().catch(error => showMessage(`Safety modul nije učitan: ${error.message}`));
+  window.SafeBoatVoice.init();
+  const settingsDialog = document.querySelector('#settings-dialog');
+  const aboutDialog = document.querySelector('#about-dialog');
+  document.querySelector('#settings-open').addEventListener('click', () => settingsDialog.showModal());
+  document.querySelector('#about-open').addEventListener('click', () => {
+    settingsDialog.close();
+    aboutDialog.showModal();
+  });
+  document.querySelectorAll('[data-voice-demo]').forEach(button => button.addEventListener('click', () => {
+    window.SafeBoatVoice.announceTest(button.dataset.voiceDemo);
+  }));
   window.addEventListener('safeboat:safety-alert', event => {
     const alert = event.detail;
     showMessage(`${alert.level}: ${alert.hazardName} — ${alert.distance} m`);
