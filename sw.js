@@ -1,9 +1,9 @@
-const CACHE = 'safeboat-v3';
+const CACHE = 'safeboat-v0.4.1';
 const APP_SHELL = [
-  './', './index.html', './styles.css', './manifest.webmanifest',
+  './', './index.html', './css/styles.css', './manifest.webmanifest',
   './js/map.js', './js/gps.js', './js/app.js',
-  './data/beaches.geojson', './data/rocks.geojson',
-  './data/marinas.geojson', './data/fuel.geojson'
+  './geojson/beaches.geojson', './geojson/rocks.geojson',
+  './geojson/marinas.geojson', './geojson/fuel.geojson'
 ];
 
 self.addEventListener('install', event => {

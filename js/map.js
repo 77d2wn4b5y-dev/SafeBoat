@@ -31,7 +31,7 @@
   }
 
   async function loadLayer(name) {
-    const response = await fetch(`data/${name}.geojson`);
+    const response = await fetch(`geojson/${name}.geojson`);
     if (!response.ok) throw new Error(`${name}.geojson (${response.status})`);
     const config = labels[name];
     const data = await response.json();
