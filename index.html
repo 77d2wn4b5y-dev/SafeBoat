@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#06283d">
-  <meta name="application-version" content="0.8.0">
+  <meta name="application-version" content="0.9.0">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <title>SafeBoat — Sitonija</title>
@@ -17,7 +17,7 @@
 
   <header class="panel header-panel">
     <div>
-      <strong class="brand">⚓ SafeBoat <small>v0.8.0</small></strong>
+      <strong class="brand">⚓ SafeBoat <small>v0.9.0</small></strong>
       <span class="subtitle">Sitonija</span>
     </div>
     <div class="header-tools">
@@ -31,6 +31,25 @@
   <section class="panel controls" aria-label="Kontrole navigacije">
     <button id="locate" class="primary" type="button">◎ Moja lokacija</button>
     <button id="return-home" type="button" disabled>↩ Povratak na početnu tačku</button>
+  </section>
+
+  <details id="emergency-tools" class="panel emergency-tools">
+    <summary>⚓ Bezbednost i hitne funkcije</summary>
+    <section id="anchor-panel" class="anchor-panel" data-status="INACTIVE" aria-label="Anchor Watch" aria-live="polite">
+      <div class="emergency-heading"><strong>⚓ Anchor Watch</strong><span id="anchor-status">NEAKTIVAN</span></div>
+      <label for="anchor-radius">Radijus: <b id="anchor-radius-value">50 m</b></label>
+      <input id="anchor-radius" type="range" min="20" max="300" step="10" value="50">
+      <div class="anchor-values"><span>Udaljenost <b id="anchor-distance">—</b></span><span>Maksimum <b id="anchor-maximum">—</b></span><span>GPS <b id="anchor-accuracy">—</b></span><span>Vreme <b id="anchor-elapsed">00:00</b></span></div>
+      <div class="emergency-actions"><button id="anchor-start" class="primary" type="button">⚓ Uključi Anchor Watch</button><button id="anchor-stop" type="button" disabled>■ Isključi Anchor Watch</button><button id="anchor-test" type="button">🧪 Test alarma</button></div>
+    </section>
+    <button id="mob-activate" class="mob-activate" type="button" aria-describedby="mob-help">🆘 ČOVEK U VODI</button>
+    <small id="mob-help">Držite 1,5 sekundi, zatim potvrdite.</small>
+  </details>
+
+  <section id="mob-card" class="panel mob-card" hidden aria-live="assertive" aria-label="MOB hitan slučaj">
+    <div class="emergency-heading"><strong>🆘 MOB AKTIVAN</strong><span id="mob-proximity"></span></div>
+    <div class="mob-values"><span>Udaljenost <b id="mob-distance">—</b></span><span>Kurs <b id="mob-bearing">—</b></span><span>Vreme <b id="mob-elapsed">00:00</b></span><span>GPS <b id="mob-accuracy">—</b></span></div>
+    <div class="mob-actions"><button id="mob-center" type="button">Centriraj MOB</button><button id="mob-help-open" type="button">Pozovi pomoć</button><button id="mob-resolve" type="button">Označi kao rešeno</button><button id="mob-cancel" type="button">Otkaži MOB</button></div>
   </section>
 
   <section id="trip-panel" class="panel trip-panel" aria-label="Snimanje vožnje" data-state="IDLE">
@@ -92,6 +111,8 @@
         <option value="sr-RS">Srpski</option><option value="en-US">English</option><option value="el-GR">Ελληνικά</option>
       </select>
       <p id="voice-state" class="voice-state" aria-live="polite">Glasovna upozorenja su uključena</p>
+      <label for="settings-anchor-radius">Podrazumevani Anchor Watch radijus</label><input id="settings-anchor-radius" type="number" min="20" max="300" step="10" value="50">
+      <label class="setting-check"><input id="mob-confirmation" type="checkbox" checked> Zaštitna potvrda za MOB (uvek ostaje najmanje jedna zaštita)</label>
       <fieldset><legend>Demo upozorenja</legend><div class="demo-actions">
         <button type="button" data-voice-demo="INFO">INFO</button><button type="button" data-voice-demo="WARNING">WARNING</button><button type="button" data-voice-demo="DANGER">DANGER</button>
       </div></fieldset>
@@ -101,13 +122,21 @@
 
   <dialog id="about-dialog" aria-labelledby="about-title">
     <form method="dialog" class="dialog-card">
-      <div class="dialog-heading"><h2 id="about-title">SafeBoat v0.8.0</h2><button class="dialog-close" value="close" aria-label="Zatvori">×</button></div>
+      <div class="dialog-heading"><h2 id="about-title">SafeBoat v0.9.0</h2><button class="dialog-close" value="close" aria-label="Zatvori">×</button></div>
       <p><strong>Voice Copilot</strong> daje glasovna, zvučna i vibraciona upozorenja na srpskom, engleskom i grčkom jeziku.</p>
       <p><strong>Safety Engine</strong> koristi postojeći GPS tok da proceni blizinu i smer kretanja ka opasnostima.</p>
       <p>Ažurirano: 23. jul 2026.</p>
       <p class="disclaimer">SafeBoat je pomoćni alat za navigaciju. Ne zamenjuje zvanične nautičke karte, lokalne propise, sigurnosnu opremu ni procenu skipera.</p>
+      <p class="disclaimer">Anchor Watch i MOB funkcije su pomoćni alati. Ne zamenjuju stalni nadzor plovila, odgovarajuću posadu, sigurnosnu opremu, VHF radio, zvanične nautičke procedure niti hitne službe.</p>
     </form>
   </dialog>
+
+  <dialog id="emergency-call-dialog" aria-labelledby="emergency-call-title"><div class="dialog-card">
+    <div class="dialog-heading"><h2 id="emergency-call-title">Pozovite pomoć</h2><button id="emergency-call-close-x" class="dialog-close" type="button" aria-label="Zatvori">×</button></div>
+    <p><strong>Evropski broj za hitne slučajeve: 112</strong></p><p>Pozovite 112 ili lokalnu obalsku službu i jasno navedite da je osoba u vodi, broj osoba, opis plovila i GPS koordinate.</p>
+    <pre id="mob-coordinates" class="coordinates">Latitude: —\nLongitude: —</pre><p id="copy-status" aria-live="polite"></p>
+    <div class="call-actions"><button id="copy-coordinates" type="button">Kopiraj koordinate</button><a class="button-link danger-button" href="tel:112">Pozovi 112</a><button id="emergency-call-close" type="button">Zatvori</button></div>
+  </div></dialog>
 
   <dialog id="routes-dialog" aria-labelledby="routes-title"><div class="dialog-card routes-card">
     <div class="dialog-heading"><h2 id="routes-title">📂 Sačuvane rute</h2><button id="routes-close" class="dialog-close" type="button" aria-label="Zatvori">×</button></div>
@@ -137,6 +166,7 @@
   <script src="js/voice-copilot.js"></script>
   <script src="js/trip-recorder.js"></script>
   <script src="js/route-planner.js"></script>
+  <script src="js/emergency.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>

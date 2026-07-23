@@ -18,6 +18,7 @@
   let generation = 0;
   let audioContext = null;
   let audioUnlocked = false;
+  let emergencyActive = false;
   const lastAnnouncements = new Map();
 
   const voiceButton = document.querySelector('#voice-toggle');
@@ -98,7 +99,7 @@
 
   function announce(detail, bypassRepeat) {
     const level = detail && String(detail.level || '').toUpperCase();
-    if (!enabled || !LEVELS[level]) return false;
+    if (!enabled || !LEVELS[level] || emergencyActive) return false;
     const hazardName = String(detail.hazardName || 'Nepoznata opasnost');
     const key = `${level}:${hazardName}`;
     const now = Date.now();
@@ -165,12 +166,28 @@
   }
 
   function speakStatus(text) {
-    if (!enabled || currentLevel || !text || !window.speechSynthesis || typeof window.SpeechSynthesisUtterance !== 'function') return false;
+    if (!enabled || emergencyActive || currentLevel || !text || !window.speechSynthesis || typeof window.SpeechSynthesisUtterance !== 'function') return false;
     const utterance = new SpeechSynthesisUtterance(String(text));
     utterance.lang = language;
     try { window.speechSynthesis.speak(utterance); } catch (error) { return false; }
     return true;
   }
+
+  function announceEmergency(text, priority) {
+    if (!enabled || !text) return false;
+    emergencyActive = priority === 'MOB' || emergencyActive;
+    generation += 1;
+    currentLevel = null;
+    if (navigator.vibrate) navigator.vibrate(priority === 'MOB' ? [800, 150, 800, 150, 1000] : VIBRATION[priority] || VIBRATION.WARNING);
+    if (!window.speechSynthesis || typeof window.SpeechSynthesisUtterance !== 'function') return false;
+    window.speechSynthesis.cancel();
+    const utterance = new SpeechSynthesisUtterance(String(text));
+    utterance.lang = language;
+    try { window.speechSynthesis.speak(utterance); } catch (_) { return false; }
+    return true;
+  }
+
+  function setEmergencyActive(value) { emergencyActive = Boolean(value); }
 
   function init() {
     updateUI();
@@ -195,5 +212,5 @@
   if (voiceButton) voiceButton.addEventListener('click', () => enabled ? disable() : enable());
   if (languageSelect) languageSelect.addEventListener('change', event => setLanguage(event.target.value));
 
-  window.SafeBoatVoice = { init, enable, disable, isEnabled, setLanguage, getLanguage, announceTest, speakStatus, unlockAudio };
+  window.SafeBoatVoice = { init, enable, disable, isEnabled, setLanguage, getLanguage, announceTest, speakStatus, unlockAudio, announceEmergency, setEmergencyActive };
 }());

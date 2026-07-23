@@ -115,7 +115,13 @@
   function getTrips() { return trips.slice(); }
   function addEvent(event) {
     if (state !== 'RECORDING' || !activeTrip || !event || typeof event.type !== 'string') return false;
-    const allowed = event.type === 'WAYPOINT_ARRIVED' ? ['type', 'waypointName', 'waypointIndex', 'timestamp', 'latitude', 'longitude'] : event.type === 'ROUTE_ALERT' ? ['type', 'level', 'crossTrackError', 'timestamp', 'latitude', 'longitude'] : [];
+    const emergencyFields = {
+      ANCHOR_ALERT: ['type', 'level', 'distanceMeters', 'radiusMeters', 'timestamp', 'latitude', 'longitude'],
+      MOB_ACTIVATED: ['type', 'timestamp', 'latitude', 'longitude', 'accuracy'],
+      MOB_RESOLVED: ['type', 'timestamp', 'latitude', 'longitude'],
+      MOB_CANCELLED: ['type', 'timestamp', 'latitude', 'longitude']
+    };
+    const allowed = event.type === 'WAYPOINT_ARRIVED' ? ['type', 'waypointName', 'waypointIndex', 'timestamp', 'latitude', 'longitude'] : event.type === 'ROUTE_ALERT' ? ['type', 'level', 'crossTrackError', 'timestamp', 'latitude', 'longitude'] : emergencyFields[event.type] || [];
     if (!allowed.length) return false;
     const clean = {}; allowed.forEach(key => { if (event[key] !== undefined) clean[key] = typeof event[key] === 'string' ? String(event[key]).slice(0, 100) : event[key]; });
     activeTrip.events.push(clean); persistActive(); return true;

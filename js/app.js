@@ -55,6 +55,9 @@
     if (window.SafeBoatRoute && window.SafeBoatRoute.updatePosition) {
       try { window.SafeBoatRoute.updatePosition(event); } catch (error) { showMessage('Navigacija rutom trenutno nije dostupna.'); }
     }
+    if (window.SafeBoatEmergency && window.SafeBoatEmergency.updatePosition) {
+      try { window.SafeBoatEmergency.updatePosition(event); } catch (error) { showMessage('Hitne funkcije trenutno nisu dostupne.'); }
+    }
   }
 
   locateButton.addEventListener('click', () => {
@@ -83,6 +86,7 @@
   if (window.SafeBoatVoice) { try { window.SafeBoatVoice.init(); } catch (error) { showMessage('Glasovni modul nije učitan.'); } }
   if (window.SafeBoatTrip) { try { window.SafeBoatTrip.init(); } catch (error) { showMessage('Dnevnik vožnji nije učitan.'); } }
   if (window.SafeBoatRoute) { try { window.SafeBoatRoute.init(); } catch (error) { showMessage('Planer rute nije učitan.'); } }
+  if (window.SafeBoatEmergency) { try { window.SafeBoatEmergency.init(); } catch (error) { showMessage('Hitne funkcije nisu učitane.'); } }
   const settingsDialog = document.querySelector('#settings-dialog');
   const aboutDialog = document.querySelector('#about-dialog');
   document.querySelector('#settings-open').addEventListener('click', () => settingsDialog.showModal());
