@@ -2,6 +2,7 @@
   "id": "./",
   "name": "SafeBoat — Sitonija",
   "short_name": "SafeBoat",
+  "version": "0.4.1",
   "description": "PWA pomoćnik za bezbedniju rekreativnu plovidbu oko Sitonije.",
   "lang": "sr",
   "start_url": "./index.html",
