@@ -1,0 +1,5 @@
+{"type":"FeatureCollection","features":[
+{"type":"Feature","properties":{"name":"Vourvourou — polazna oblast","description":"Približna oblast vezova i iznajmljivanja čamaca."},"geometry":{"type":"Point","coordinates":[23.77381,40.19356]}},
+{"type":"Feature","properties":{"name":"Marina Ormos Panagias","description":"Luka na severoistočnoj obali Sitonije."},"geometry":{"type":"Point","coordinates":[23.9284,40.2337]}},
+{"type":"Feature","properties":{"name":"Porto Koufo","description":"Prirodno zaštićena luka na jugu Sitonije."},"geometry":{"type":"Point","coordinates":[23.9232,39.9717]}}
+]}

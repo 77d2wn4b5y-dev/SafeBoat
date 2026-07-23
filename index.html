@@ -1,98 +1,44 @@
 <!doctype html>
 <html lang="sr">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="theme-color" content="#071d2b">
-<title>SafeBoat Greece</title>
-<link rel="manifest" href="manifest.webmanifest">
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-<style>
-:root{--panel:rgba(7,29,43,.94);--text:#f7fbff;--muted:#b9d2df;--accent:#42b8f5;--warn:#ffb020}
-*{box-sizing:border-box} html,body,#map{height:100%;margin:0} body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#071d2b;color:var(--text)}
-#map{position:fixed;inset:0}
-.top{position:fixed;z-index:1000;left:10px;right:10px;top:calc(10px + env(safe-area-inset-top));background:var(--panel);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:12px;box-shadow:0 10px 30px rgba(0,0,0,.28)}
-.head{display:flex;align-items:center;justify-content:space-between;gap:10px}.brand{font-weight:800;font-size:18px}.badge{font-size:11px;color:#071d2b;background:#8fe1ff;padding:5px 8px;border-radius:999px;font-weight:800}
-.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin-top:10px}.metric{background:rgba(255,255,255,.08);border-radius:12px;padding:8px;text-align:center}.metric b{display:block;font-size:17px}.metric span{font-size:10px;color:var(--muted)}
-.actions{display:flex;gap:7px;margin-top:9px;overflow-x:auto}button,label.btn{appearance:none;border:0;border-radius:11px;padding:10px 12px;font-weight:750;white-space:nowrap;background:#eaf7fc;color:#082334}button.primary{background:var(--accent);color:#06202e}button.warn{background:var(--warn);color:#2b1900}button.stop{background:#ffdbdc;color:#6a0608}
-.bottom{position:fixed;z-index:1000;left:10px;right:10px;bottom:calc(10px + env(safe-area-inset-bottom));background:var(--panel);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:10px 12px;box-shadow:0 10px 30px rgba(0,0,0,.28)}
-.status{font-size:13px}.small{font-size:11px;color:var(--muted);margin-top:4px}.dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#7d8c94;margin-right:5px}.dot.on{background:#3bd16f}
-#alarm{display:none;position:fixed;z-index:3000;inset:0;background:rgba(175,30,32,.96);align-items:center;justify-content:center;text-align:center;padding:26px}#alarm h1{font-size:36px;margin:0 0 8px}#alarm p{font-size:19px;line-height:1.35}
-.sheet{display:none;position:fixed;z-index:2000;left:10px;right:10px;bottom:calc(10px + env(safe-area-inset-bottom));max-height:72vh;overflow:auto;background:#f7fbff;color:#092231;border-radius:18px;padding:16px;box-shadow:0 15px 50px rgba(0,0,0,.45)}.sheet h2{margin:0 0 8px}.sheet p,.sheet li{font-size:14px;line-height:1.45}.close{float:right}
-.leaflet-control-layers{margin-top:145px!important}.poi-icon{font-size:22px;text-shadow:0 1px 4px white}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#06283d">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>SafeBoat — Sitonija</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div id="map"></div>
-<section class="top">
-  <div class="head"><div class="brand">⚓ SafeBoat Greece</div><div class="badge">DIJAPOROS v1</div></div>
-  <div class="grid">
-    <div class="metric"><b id="speed">0.0</b><span>čvorova</span></div>
-    <div class="metric"><b id="course">—</b><span>kurs</span></div>
-    <div class="metric"><b id="accuracy">—</b><span>GPS ± m</span></div>
-    <div class="metric"><b id="distance">0.00</b><span>ruta NM</span></div>
-  </div>
-  <div class="actions">
-    <button class="primary" id="start">Pokreni GPS</button>
-    <button id="record">Snimi rutu</button>
-    <button id="center">Centriraj</button>
-    <button class="warn" id="test">Test alarma</button>
-    <button id="info">Važno</button>
-    <label class="btn">Uvezi zone<input id="import" type="file" accept=".json,.geojson" hidden></label>
-  </div>
-</section>
-<section class="bottom">
-  <div class="status"><span id="gpsDot" class="dot"></span><span id="status">GPS nije pokrenut.</span></div>
-  <div class="small" id="nearest">Najbliža tačka: —</div>
-</section>
-<div id="alarm"><div><h1>⚠️ OPREZ</h1><p id="alarmText"></p><button id="dismiss">Razumem</button></div></div>
-<div class="sheet" id="sheet">
- <button class="close" id="closeSheet">Zatvori</button>
- <h2>Bezbednosna napomena</h2>
- <p>Ova verzija je pomoćno sredstvo za orijentaciju. Nije zvanična nautička karta i ne sme biti jedini izvor za plovidbu.</p>
- <ul>
-  <li>Plave turističke tačke su približne.</li>
-  <li>Narandžaste zone su savetodavne zone spore vožnje, a ne kompletan popis stena i plićaka.</li>
-  <li>OpenSeaMap sloj je koristan, ali nije zamena za zvanične karte Hellenic Navy Hydrographic Service.</li>
-  <li>Drži ekran uključen dok koristiš web-verziju; iOS može ograničiti GPS kada se ekran zaključa.</li>
- </ul>
- <p><b>Za pravi alarm stena:</b> uvezi GeoJSON sa potvrđenim tačkama i radijusom.</p>
-</div>
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script>
-const places=[{"name": "Blue Lagoon / Galazia Nera", "lat": 40.22167, "lon": 23.78861, "type": "beach", "note": "Veoma plitka laguna; vozi polako i pazi na kupače i druga plovila."}, {"name": "Myrsini / Hawaii Beach", "lat": 40.2102, "lon": 23.8002, "type": "beach", "note": "Orijentaciona lokacija na istočnoj strani Dijaporosa."}, {"name": "Kryfto Bay", "lat": 40.2228, "lon": 23.7749, "type": "bay", "note": "Zaštićena uvala; završni deo je plitak."}, {"name": "Karidi Beach", "lat": 40.1939, "lon": 23.8062, "type": "beach", "note": "Popularna plaža kod Vurvurua; pojačan oprez zbog kupača."}, {"name": "Fava Beach", "lat": 40.1886, "lon": 23.8179, "type": "beach", "note": "Orijentaciona lokacija; prilaz proveriti na nautičkoj karti."}, {"name": "Livari Lagoon", "lat": 40.2141, "lon": 23.7377, "type": "lagoon", "note": "Plitka priobalna oblast; nije ruta za prolaz bez lokalnog znanja."}, {"name": "Vourvourou – polazna oblast", "lat": 40.19356, "lon": 23.77381, "type": "start", "note": "Proveri tačan ponton i uputstva svoje rent-a-boat firme."}, {"name": "Dijaporos – centar ostrva", "lat": 40.20883, "lon": 23.77616, "type": "orientation", "note": "Orijentaciona tačka, nije mesto za sidrenje."}];
-let zones=[{"name": "Blue Lagoon – savetodavna zona spore vožnje", "lat": 40.22167, "lon": 23.78861, "radius": 350, "severity": "caution", "message": "Plitka laguna i mnogo kupača. Uspori i prati dubinu."}, {"name": "Kryfto – savetodavna plitka zona", "lat": 40.2228, "lon": 23.7749, "radius": 250, "severity": "caution", "message": "Završni deo uvale je plitak. Uspori i proveravaj dubinu."}, {"name": "Karidi – zona kupača", "lat": 40.1939, "lon": 23.8062, "radius": 300, "severity": "caution", "message": "Blizina popularne plaže. Uspori i drži odstojanje od kupača."}];
-let watchId=null,userMarker=null,accuracyCircle=null,lastPos=null,totalM=0,recording=false,track=[],trackLine=null,alarmLock=false,wakeLock=null;
-const map=L.map('map',{zoomControl:false}).setView([40.2088,23.7810],14);
-const osm=L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'© OpenStreetMap contributors'}).addTo(map);
-const sea=L.tileLayer('https://tiles.openseamap.org/seamark/{z}/{x}/{y}.png',{maxZoom:18,attribution:'OpenSeaMap'});
-const satellite=L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,attribution:'Esri World Imagery'});
-L.control.layers({'Mapa':osm,'Satelit':satellite},{'Nautičke oznake':sea},{position:'topright'}).addTo(map); sea.addTo(map); L.control.zoom({position:'bottomright'}).addTo(map);
-const icons={beach:'🏖️',bay:'⚓',lagoon:'🌊',start:'🚤',orientation:'📍'};
-places.forEach(p=>{const icon=L.divIcon({className:'poi-icon',html:icons[p.type]||'📍',iconSize:[28,28],iconAnchor:[14,14]});L.marker([p.lat,p.lon],{icon}).addTo(map).bindPopup(`<b>${p.name}</b><br>${p.note}<br><small>Približna orijentaciona lokacija.</small>`);});
-let zoneLayers=[];
-function drawZones(){zoneLayers.forEach(x=>map.removeLayer(x));zoneLayers=[];zones.forEach(z=>{const l=L.circle([z.lat,z.lon],{radius:z.radius,color:'#ff8a00',fillColor:'#ffb020',fillOpacity:.18,weight:2}).bindPopup(`<b>${z.name}</b><br>${z.message}<br><small>Savetodavna zona, nije potvrđena karta prepreka.</small>`).addTo(map);zoneLayers.push(l);});}
-drawZones();
-function toRad(x){return x*Math.PI/180}
-function distanceM(a,b){const R=6371000,dLat=toRad(b.lat-a.lat),dLon=toRad(b.lon-a.lon),p1=toRad(a.lat),p2=toRad(b.lat);const q=Math.sin(dLat/2)**2+Math.cos(p1)*Math.cos(p2)*Math.sin(dLon/2)**2;return 2*R*Math.atan2(Math.sqrt(q),Math.sqrt(1-q));}
-function bearing(a,b){const y=Math.sin(toRad(b.lon-a.lon))*Math.cos(toRad(b.lat));const x=Math.cos(toRad(a.lat))*Math.sin(toRad(b.lat))-Math.sin(toRad(a.lat))*Math.cos(toRad(b.lat))*Math.cos(toRad(b.lon-a.lon));return (Math.atan2(y,x)*180/Math.PI+360)%360;}
-function compass(d){if(d==null||isNaN(d))return '—';const n=['N','NE','E','SE','S','SW','W','NW'];return `${Math.round(d)}° ${n[Math.round(d/45)%8]}`;}
-function beep(){try{const a=new (window.AudioContext||window.webkitAudioContext)(),o=a.createOscillator(),g=a.createGain();o.connect(g);g.connect(a.destination);o.frequency.value=920;g.gain.value=.22;o.start();setTimeout(()=>{o.stop();a.close()},900)}catch(e){}if(navigator.vibrate)navigator.vibrate([500,180,500,180,700]);}
-function alertZone(z,d){if(alarmLock)return;alarmLock=true;document.getElementById('alarmText').textContent=`${z.name}. ${z.message} Udaljenost približno ${Math.round(d)} m.`;document.getElementById('alarm').style.display='flex';beep();setTimeout(()=>alarmLock=false,8000);}
-function checkZones(pos){zones.forEach(z=>{const d=distanceM(pos,z);if(d<=z.radius)alertZone(z,d)})}
-function nearest(pos){let best=null;places.forEach(p=>{const d=distanceM(pos,p);if(!best||d<best.d)best={p,d}});if(best)document.getElementById('nearest').textContent=`Najbliža tačka: ${best.p.name} • ${best.d<1000?Math.round(best.d)+' m':(best.d/1000).toFixed(1)+' km'}`;}
-async function lockWake(){try{if('wakeLock'in navigator)wakeLock=await navigator.wakeLock.request('screen')}catch(e){}}
-document.getElementById('start').onclick=()=>{if(!navigator.geolocation){document.getElementById('status').textContent='GPS nije podržan.';return}lockWake();watchId=navigator.geolocation.watchPosition(p=>{const pos={lat:p.coords.latitude,lon:p.coords.longitude};const ll=[pos.lat,pos.lon];if(!userMarker){userMarker=L.circleMarker(ll,{radius:9,color:'#fff',weight:3,fillColor:'#16b85b',fillOpacity:1}).addTo(map);accuracyCircle=L.circle(ll,{radius:p.coords.accuracy,color:'#16b85b',weight:1,fillOpacity:.08}).addTo(map);map.setView(ll,16);}else{userMarker.setLatLng(ll);accuracyCircle.setLatLng(ll).setRadius(p.coords.accuracy)}let sp=p.coords.speed;if((sp==null||sp<0)&&lastPos){const dt=(p.timestamp-lastPos.t)/1000;if(dt>0)sp=distanceM(lastPos,pos)/dt}document.getElementById('speed').textContent=((sp||0)*1.94384).toFixed(1);const crs=p.coords.heading!=null&&!isNaN(p.coords.heading)?p.coords.heading:(lastPos?bearing(lastPos,pos):null);document.getElementById('course').textContent=compass(crs);document.getElementById('accuracy').textContent=Math.round(p.coords.accuracy);document.getElementById('status').textContent='GPS aktivan';document.getElementById('gpsDot').classList.add('on');if(recording){if(lastPos)totalM+=distanceM(lastPos,pos);track.push(ll);if(trackLine)trackLine.setLatLngs(track);else trackLine=L.polyline(track,{color:'#e4002b',weight:4}).addTo(map);document.getElementById('distance').textContent=(totalM/1852).toFixed(2);}nearest(pos);checkZones(pos);lastPos={...pos,t:p.timestamp};},e=>document.getElementById('status').textContent='GPS greška: '+e.message,{enableHighAccuracy:true,maximumAge:500,timeout:15000});};
-document.getElementById('record').onclick=e=>{recording=!recording;e.target.textContent=recording?'Zaustavi snimanje':'Snimi rutu';e.target.classList.toggle('stop',recording)};
-document.getElementById('center').onclick=()=>{if(userMarker)map.setView(userMarker.getLatLng(),16)};
-document.getElementById('test').onclick=()=>alertZone({name:'Test alarma',message:'Zvuk i ekran rade.',radius:1},0);
-document.getElementById('dismiss').onclick=()=>{document.getElementById('alarm').style.display='none';alarmLock=false};
-document.getElementById('info').onclick=()=>document.getElementById('sheet').style.display='block';
-document.getElementById('closeSheet').onclick=()=>document.getElementById('sheet').style.display='none';
-document.getElementById('import').onchange=async e=>{try{const data=JSON.parse(await e.target.files[0].text());const added=[];(data.features||[]).forEach(f=>{if(f.geometry&&f.geometry.type==='Point'){const coords=f.geometry.coordinates;const p=f.properties||{};added.push({name:p.name||'Uvezena zona',lat:coords[1],lon:coords[0],radius:Number(p.radius||100),severity:p.severity||'danger',message:p.message||'Približavanje uvezenoj zoni.'});}});if(!added.length)throw new Error('Nema Point objekata.');zones=zones.concat(added);drawZones();alert(`Uvezeno zona: ${added.length}`);}catch(err){alert('Uvoz nije uspeo: '+err.message)}};
-if('serviceWorker'in navigator)navigator.serviceWorker.register('./sw.js').catch(()=>{});
-</script>
+  <main id="map" aria-label="Mapa Sitonije"></main>
+
+  <header class="panel header-panel">
+    <div>
+      <strong class="brand">⚓ SafeBoat</strong>
+      <span class="subtitle">Sitonija</span>
+    </div>
+    <span id="gps-state" class="status" aria-live="polite"><i></i> GPS nije aktivan</span>
+  </header>
+
+  <section class="panel controls" aria-label="Kontrole navigacije">
+    <button id="locate" class="primary" type="button">◎ Moja lokacija</button>
+    <button id="return-home" type="button" disabled>↩ Povratak na početnu tačku</button>
+  </section>
+
+  <aside class="panel telemetry" aria-label="GPS podaci">
+    <div><b id="speed">0.0</b><span>čvorova</span></div>
+    <div><b id="course">—</b><span>kurs</span></div>
+    <div><b id="accuracy">—</b><span>preciznost</span></div>
+    <div><b id="distance">0.00</b><span>NM do početka</span></div>
+  </aside>
+
+  <div id="message" class="message" role="status" aria-live="polite"></div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+  <script src="js/map.js"></script>
+  <script src="js/gps.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>

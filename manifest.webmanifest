@@ -1,9 +1,13 @@
 {
-  "name": "SafeBoat Greece",
+  "id": "./",
+  "name": "SafeBoat — Sitonija",
   "short_name": "SafeBoat",
+  "description": "PWA pomoćnik za bezbedniju rekreativnu plovidbu oko Sitonije.",
+  "lang": "sr",
   "start_url": "./index.html",
+  "scope": "./",
   "display": "standalone",
-  "background_color": "#071d2b",
-  "theme_color": "#071d2b",
-  "description": "GPS pomoćna aplikacija za rekreativnu plovidbu oko Dijaporosa."
+  "orientation": "any",
+  "background_color": "#06283d",
+  "theme_color": "#06283d"
 }

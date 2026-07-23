@@ -1,0 +1,5 @@
+{"type":"FeatureCollection","features":[
+{"type":"Feature","properties":{"name":"Karidi Beach","description":"Popularna plaža kod Vurvurua; obratite pažnju na kupače."},"geometry":{"type":"Point","coordinates":[23.8062,40.1939]}},
+{"type":"Feature","properties":{"name":"Fava Beach","description":"Plaža na istočnoj obali Sitonije."},"geometry":{"type":"Point","coordinates":[23.8179,40.1886]}},
+{"type":"Feature","properties":{"name":"Blue Lagoon","description":"Plitka laguna između ostrva; plovite polako."},"geometry":{"type":"Point","coordinates":[23.78861,40.22167]}}
+]}
