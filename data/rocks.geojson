@@ -1,0 +1,4 @@
+{"type":"FeatureCollection","features":[
+{"type":"Feature","properties":{"name":"Oprez — plitka zona","description":"Orijentaciona oznaka. Proverite zvaničnu nautičku kartu."},"geometry":{"type":"Point","coordinates":[23.8008,40.2164]}},
+{"type":"Feature","properties":{"name":"Oprez — obalne stene","description":"Držite bezbedno odstojanje od obale."},"geometry":{"type":"Point","coordinates":[23.8314,40.1327]}}
+]}

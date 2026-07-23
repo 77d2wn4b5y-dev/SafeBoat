@@ -1,0 +1,4 @@
+{"type":"FeatureCollection","features":[
+{"type":"Feature","properties":{"name":"Gorivo — Nikiti","description":"Proverite radno vreme i dostupnost goriva pre polaska."},"geometry":{"type":"Point","coordinates":[23.6714,40.2208]}},
+{"type":"Feature","properties":{"name":"Gorivo — Neos Marmaras","description":"Približna lokacija; proverite dostupnost goriva za plovila."},"geometry":{"type":"Point","coordinates":[23.7852,40.0964]}}
+]}
