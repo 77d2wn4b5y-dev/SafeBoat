@@ -10,9 +10,10 @@
     INFO: [150], WARNING: [250, 120, 250], DANGER: [400, 150, 400, 150, 600]
   };
   const TONES = { INFO: 1, WARNING: 2, DANGER: 3 };
-  let enabled = localStorage.getItem(STORAGE_ENABLED) !== 'false';
-  let language = LANGUAGES.includes(localStorage.getItem(STORAGE_LANGUAGE))
-    ? localStorage.getItem(STORAGE_LANGUAGE) : 'sr-RS';
+  function stored(key) { try { return localStorage.getItem(key); } catch (_) { return null; } }
+  function store(key, value) { try { localStorage.setItem(key, value); } catch (_) { /* preferences remain optional */ } }
+  let enabled = stored(STORAGE_ENABLED) !== 'false';
+  let language = LANGUAGES.includes(stored(STORAGE_LANGUAGE)) ? stored(STORAGE_LANGUAGE) : 'sr-RS';
   let currentLevel = null;
   let generation = 0;
   let audioContext = null;
@@ -117,7 +118,7 @@
     }
 
     synthesis.cancel();
-    const utterance = new SpeechSynthesisUtterance(messageFor(level, hazardName, detail.distance));
+    const utterance = new SpeechSynthesisUtterance(detail.message || messageFor(level, hazardName, detail.distance));
     utterance.lang = language;
     currentLevel = level;
     utterance.onend = () => { if (token === generation) currentLevel = null; };
@@ -135,7 +136,7 @@
 
   function enable() {
     enabled = true;
-    localStorage.setItem(STORAGE_ENABLED, 'true');
+    store(STORAGE_ENABLED, 'true');
     updateUI();
   }
 
@@ -145,7 +146,7 @@
     currentLevel = null;
     if (window.speechSynthesis) window.speechSynthesis.cancel();
     if (navigator.vibrate) navigator.vibrate(0);
-    localStorage.setItem(STORAGE_ENABLED, 'false');
+    store(STORAGE_ENABLED, 'false');
     updateUI();
   }
 
@@ -153,7 +154,7 @@
   function setLanguage(value) {
     if (!LANGUAGES.includes(value)) return false;
     language = value;
-    localStorage.setItem(STORAGE_LANGUAGE, language);
+    store(STORAGE_LANGUAGE, language);
     updateUI();
     return true;
   }
@@ -177,6 +178,14 @@
   }
 
   window.addEventListener('safeboat:safety-alert', event => announce(event.detail));
+  const routeMessages = {
+    'sr-RS': { waypoint: name => `Stigli ste do tačke ${name}.`, caution: 'Pažnja. Udaljavate se od planirane rute.', offRoute: 'Upozorenje. Napustili ste planiranu rutu. Proverite kurs.', arrived: 'Stigli ste na odredište.' },
+    'en-US': { waypoint: name => `You have reached waypoint ${name}.`, caution: 'Caution. You are moving away from the planned route.', offRoute: 'Warning. You have left the planned route. Check your course.', arrived: 'You have reached your destination.' },
+    'el-GR': { waypoint: name => `Φτάσατε στο σημείο ${name}.`, caution: 'Προσοχή. Απομακρύνεστε από την προγραμματισμένη διαδρομή.', offRoute: 'Προειδοποίηση. Βγήκατε από την προγραμματισμένη διαδρομή. Ελέγξτε την πορεία σας.', arrived: 'Φτάσατε στον προορισμό σας.' }
+  };
+  window.addEventListener('safeboat:waypoint-arrived', event => announce({ level: 'INFO', hazardName: `route-waypoint-${event.detail.waypointIndex}`, message: routeMessages[language].waypoint(String(event.detail.waypointName || '')) }));
+  window.addEventListener('safeboat:route-alert', event => announce({ level: 'WARNING', hazardName: `route-${event.detail.level}`, message: event.detail.level === 'OFF_ROUTE' ? routeMessages[language].offRoute : routeMessages[language].caution }));
+  window.addEventListener('safeboat:route-arrived', () => announce({ level: 'INFO', hazardName: 'route-arrived', message: routeMessages[language].arrived }));
   function unlockOnControl(event) {
     if (!event.target.closest('button, select')) return;
     unlockAudio();

@@ -113,6 +113,13 @@
   function isPaused() { return state === 'PAUSED'; }
   function getCurrentTrip() { return activeTrip; }
   function getTrips() { return trips.slice(); }
+  function addEvent(event) {
+    if (state !== 'RECORDING' || !activeTrip || !event || typeof event.type !== 'string') return false;
+    const allowed = event.type === 'WAYPOINT_ARRIVED' ? ['type', 'waypointName', 'waypointIndex', 'timestamp', 'latitude', 'longitude'] : event.type === 'ROUTE_ALERT' ? ['type', 'level', 'crossTrackError', 'timestamp', 'latitude', 'longitude'] : [];
+    if (!allowed.length) return false;
+    const clean = {}; allowed.forEach(key => { if (event[key] !== undefined) clean[key] = typeof event[key] === 'string' ? String(event[key]).slice(0, 100) : event[key]; });
+    activeTrip.events.push(clean); persistActive(); return true;
+  }
   function deleteTrip(id) { const original = trips.length; trips = trips.filter(trip => trip.id !== id); if (trips.length === original) return false; storageSet(TRIPS_KEY, trips); renderLogbook(); return true; }
   function clearTrips() { trips = []; storageSet(TRIPS_KEY, trips); hideSavedRoute(); renderLogbook(); }
   function geoJSON(trip) {
@@ -149,5 +156,5 @@
     document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible' && state === 'RECORDING') requestWakeLock(); });
     timer = window.setInterval(render, 1000); render(); renderLogbook(); return window.SafeBoatTrip;
   }
-  window.SafeBoatTrip = { init, start, pause, resume, stop, updatePosition, isRecording, isPaused, getCurrentTrip, getTrips, deleteTrip, clearTrips, exportTripGeoJSON };
+  window.SafeBoatTrip = { init, start, pause, resume, stop, updatePosition, addEvent, isRecording, isPaused, getCurrentTrip, getTrips, deleteTrip, clearTrips, exportTripGeoJSON };
 }());
