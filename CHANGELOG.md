@@ -92,6 +92,14 @@
 - Kept Diaporos map centering independent from stored POI coordinates.
 - No dataset coordinates or dataset version were changed.
 
+## v1.1.3 — Verified Sithonia Beach Coordinates
+
+- Added a complete, machine-readable coordinate audit for all 34 Sithonia beach records.
+- Left coordinates unmodified and unverified wherever no traceable named OpenStreetMap object could be inspected; these records explicitly require manual review.
+- Added movement distances and threshold flags to the audit format.
+- Restricted the “Potvrđeno” label to records with verification metadata and omitted empty source rows.
+- Updated the application to v1.1.3 and the Sithonia data schema version to v1.1.0.
+
 ## v1.1.1 — Diaporos Map & Responsive Beach Details
 
 - Diaporos-centered initial map view.

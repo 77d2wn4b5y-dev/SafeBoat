@@ -1,4 +1,4 @@
-const CACHE = 'safeboat-v1.1.2';
+const CACHE = 'safeboat-v1.1.3';
 const APP_SHELL = [...new Set([
   './', './index.html', './styles.css', './manifest.webmanifest',
   './js/core.js', './js/map.js', './js/gps.js', './js/safety.js', './js/voice-copilot.js', './js/trip-recorder.js', './js/route-planner.js', './js/emergency.js', './js/sithonia-guide.js', './js/ui-panels.js', './js/app.js',

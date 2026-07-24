@@ -1,0 +1,625 @@
+{
+  "generatedAt": "2026-07-24",
+  "datasetVersion": "1.1.0",
+  "coordinateOrder": "[longitude, latitude]",
+  "summary": {
+    "audited": 34,
+    "changed": 0,
+    "verified": 0,
+    "manualReviewRequired": 34
+  },
+  "beaches": [
+    {
+      "id": "nikiti-beach",
+      "oldCoordinates": [
+        23.6688,
+        40.2202
+      ],
+      "newCoordinates": [
+        23.6688,
+        40.2202
+      ],
+      "changed": false,
+      "source": null,
+      "sourceRef": null,
+      "distanceMovedMeters": 0.0,
+      "movementFlags": [],
+      "verification": "No reliable named reusable source found; manual review required",
+      "reviewedAt": "2026-07-24"
+    },
+    {
+      "id": "agios-ioannis-beach",
+      "oldCoordinates": [
+        23.689,
+        40.1905
+      ],
+      "newCoordinates": [
+        23.689,
+        40.1905
+      ],
+      "changed": false,
+      "source": null,
+      "sourceRef": null,
+      "distanceMovedMeters": 0.0,
+      "movementFlags": [],
+      "verification": "No reliable named reusable source found; manual review required",
+      "reviewedAt": "2026-07-24"
+    },
+    {
+      "id": "kastri-beach",
+      "oldCoordinates": [
+        23.695,
+        40.1818
+      ],
+      "newCoordinates": [
+        23.695,
+        40.1818
+      ],
+      "changed": false,
+      "source": null,
+      "sourceRef": null,
+      "distanceMovedMeters": 0.0,
+      "movementFlags": [],
+      "verification": "No reliable named reusable source found; manual review required",
+      "reviewedAt": "2026-07-24"
+    },
+    {
+      "id": "kalogria-beach",
+      "oldCoordinates": [
+        23.7047,
+        40.1673
+      ],
+      "newCoordinates": [
+        23.7047,
+        40.1673
+      ],
+      "changed": false,
+      "source": null,
+      "sourceRef": null,
+      "distanceMovedMeters": 0.0,
+      "movementFlags": [],
+      "verification": "No reliable named reusable source found; manual review required",
+      "reviewedAt": "2026-07-24"
+    },
+    {
+      "id": "spathies-beach",
+      "oldCoordinates": [
+        23.7114,
+        40.1582
+      ],
+      "newCoordinates": [
+        23.7114,
+        40.1582
+      ],
+      "changed": false,
+      "source": null,
+      "sourceRef": null,
+      "distanceMovedMeters": 0.0,
+      "movementFlags": [],
+      "verification": "No reliable named reusable source found; manual review required",
+      "reviewedAt": "2026-07-24"
+    },
+    {
+      "id": "elia-beach",
+      "oldCoordinates": [
+        23.72,
+        40.145
+      ],
+      "newCoordinates": [
+        23.72,
+        40.145
+      ],
+      "changed": false,
+      "source": null,
+      "sourceRef": null,
+      "distanceMovedMeters": 0.0,
+      "movementFlags": [],
+      "verification": "No reliable named reusable source found; manual review required",
+      "reviewedAt": "2026-07-24"
+    },
+    {
+      "id": "lagomandra-beach",
+      "oldCoordinates": [
+        23.7285,
+        40.123
+      ],
+      "newCoordinates": [
+        23.7285,
+        40.123
+      ],
+      "changed": false,
+      "source": null,
+      "sourceRef": null,
+      "distanceMovedMeters": 0.0,
+      "movementFlags": [],
+      "verification": "No reliable named reusable source found; manual review required",
+      "reviewedAt": "2026-07-24"
+    },
+    {
+      "id": "tripotamos-beach",
+      "oldCoordinates": [
+        23.7385,
+        40.106
+      ],
+      "newCoordinates": [
+        23.7385,
+        40.106
+      ],
+      "changed": false,
+      "source": null,
+      "sourceRef": null,
+      "distanceMovedMeters": 0.0,
+      "movementFlags": [],
+      "verification": "No reliable named reusable source found; manual review required",
+      "reviewedAt": "2026-07-24"
+    },
+    {
+      "id": "paradisos-beach",
+      "oldCoordinates": [
+        23.777,
+        40.1044
+      ],
+      "newCoordinates": [
+        23.777,
+        40.1044
+      ],
+      "changed": false,
+      "source": null,
+      "sourceRef": null,
+      "distanceMovedMeters": 0.0,
+      "movementFlags": [],
+      "verification": "No reliable named reusable source found; manual review required",
+      "reviewedAt": "2026-07-24"
+    },
+    {
+      "id": "toroni-beach",
+      "oldCoordinates": [
+        23.897,
+        39.9868
+      ],
+      "newCoordinates": [
+        23.897,
+        39.9868
+      ],
+      "changed": false,
+      "source": null,
+      "sourceRef": null,
+      "distanceMovedMeters": 0.0,
+      "movementFlags": [],
+      "verification": "No reliable named reusable source found; manual review required",
+      "reviewedAt": "2026-07-24"
+    },
+    {
+      "id": "tristinika-beach",
+      "oldCoordinates": [
+        23.8762,
+        40.0064
+      ],
+      "newCoordinates": [
+        23.8762,
+        40.0064
+      ],
+      "changed": false,
+      "source": null,
+      "sourceRef": null,
+      "distanceMovedMeters": 0.0,
+      "movementFlags": [],
+      "verification": "No reliable named reusable source found; manual review required",
+      "reviewedAt": "2026-07-24"
+    },
+    {
+      "id": "destenika-beach",
+      "oldCoordinates": [
+        23.868,
+        40.0135
+      ],
+      "newCoordinates": [
+        23.868,
+        40.0135
+      ],
+      "changed": false,
+      "source": null,
+      "sourceRef": null,
+      "distanceMovedMeters": 0.0,
+      "movementFlags": [],
+      "verification": "No reliable named reusable source found; manual review required",
+      "reviewedAt": "2026-07-24"
+    },
+    {
+      "id": "aretes-beach",
+      "oldCoordinates": [
+        23.8505,
+        40.0255
+      ],
+      "newCoordinates": [
+        23.8505,
+        40.0255
+      ],
+      "changed": false,
+      "source": null,
+      "sourceRef": null,
+      "distanceMovedMeters": 0.0,
+      "movementFlags": [],
+      "verification": "No reliable named reusable source found; manual review required",
+      "reviewedAt": "2026-07-24"
+    },
+    {
+      "id": "trani-ammouda-beach",
+      "oldCoordinates": [
+        23.7215,
+        40.2492
+      ],
+      "newCoordinates": [
+        23.7215,
+        40.2492
+      ],
+      "changed": false,
+      "source": null,
+      "sourceRef": null,
+      "distanceMovedMeters": 0.0,
+      "movementFlags": [],
+      "verification": "No reliable named reusable source found; manual review required",
+      "reviewedAt": "2026-07-24"
+    },
+    {
+      "id": "lagonisi-beach",
+      "oldCoordinates": [
+        23.7445,
+        40.2285
+      ],
+      "newCoordinates": [
+        23.7445,
+        40.2285
+      ],
+      "changed": false,
+      "source": null,
+      "sourceRef": null,
+      "distanceMovedMeters": 0.0,
+      "movementFlags": [],
+      "verification": "No reliable named reusable source found; manual review required",
+      "reviewedAt": "2026-07-24"
+    },
+    {
+      "id": "latoura-beach",
+      "oldCoordinates": [
+        23.7382,
+        40.2312
+      ],
+      "newCoordinates": [
+        23.7382,
+        40.2312
+      ],
+      "changed": false,
+      "source": null,
+      "sourceRef": null,
+      "distanceMovedMeters": 0.0,
+      "movementFlags": [],
+      "verification": "No reliable named reusable source found; manual review required",
+      "reviewedAt": "2026-07-24"
+    },
+    {
+      "id": "talgo-beach",
+      "oldCoordinates": [
+        23.7565,
+        40.215
+      ],
+      "newCoordinates": [
+        23.7565,
+        40.215
+      ],
+      "changed": false,
+      "source": null,
+      "sourceRef": null,
+      "distanceMovedMeters": 0.0,
+      "movementFlags": [],
+      "verification": "No reliable named reusable source found; manual review required",
+      "reviewedAt": "2026-07-24"
+    },
+    {
+      "id": "karidi-beach",
+      "oldCoordinates": [
+        23.809,
+        40.191
+      ],
+      "newCoordinates": [
+        23.809,
+        40.191
+      ],
+      "changed": false,
+      "source": null,
+      "sourceRef": null,
+      "distanceMovedMeters": 0.0,
+      "movementFlags": [],
+      "verification": "No reliable named reusable source found; manual review required",
+      "reviewedAt": "2026-07-24"
+    },
+    {
+      "id": "fava-beach",
+      "oldCoordinates": [
+        23.8175,
+        40.1815
+      ],
+      "newCoordinates": [
+        23.8175,
+        40.1815
+      ],
+      "changed": false,
+      "source": null,
+      "sourceRef": null,
+      "distanceMovedMeters": 0.0,
+      "movementFlags": [],
+      "verification": "No reliable named reusable source found; manual review required",
+      "reviewedAt": "2026-07-24"
+    },
+    {
+      "id": "livari-beach",
+      "oldCoordinates": [
+        23.7805,
+        40.205
+      ],
+      "newCoordinates": [
+        23.7805,
+        40.205
+      ],
+      "changed": false,
+      "source": null,
+      "sourceRef": null,
+      "distanceMovedMeters": 0.0,
+      "movementFlags": [],
+      "verification": "No reliable named reusable source found; manual review required",
+      "reviewedAt": "2026-07-24"
+    },
+    {
+      "id": "zografou-beach",
+      "oldCoordinates": [
+        23.85,
+        40.169
+      ],
+      "newCoordinates": [
+        23.85,
+        40.169
+      ],
+      "changed": false,
+      "source": null,
+      "sourceRef": null,
+      "distanceMovedMeters": 0.0,
+      "movementFlags": [],
+      "verification": "No reliable named reusable source found; manual review required",
+      "reviewedAt": "2026-07-24"
+    },
+    {
+      "id": "akti-koutloumousiou",
+      "oldCoordinates": [
+        23.866,
+        40.158
+      ],
+      "newCoordinates": [
+        23.866,
+        40.158
+      ],
+      "changed": false,
+      "source": null,
+      "sourceRef": null,
+      "distanceMovedMeters": 0.0,
+      "movementFlags": [],
+      "verification": "No reliable named reusable source found; manual review required",
+      "reviewedAt": "2026-07-24"
+    },
+    {
+      "id": "sarti-beach",
+      "oldCoordinates": [
+        23.9805,
+        40.0945
+      ],
+      "newCoordinates": [
+        23.9805,
+        40.0945
+      ],
+      "changed": false,
+      "source": null,
+      "sourceRef": null,
+      "distanceMovedMeters": 0.0,
+      "movementFlags": [],
+      "verification": "No reliable named reusable source found; manual review required",
+      "reviewedAt": "2026-07-24"
+    },
+    {
+      "id": "achlada-beach",
+      "oldCoordinates": [
+        23.976,
+        40.109
+      ],
+      "newCoordinates": [
+        23.976,
+        40.109
+      ],
+      "changed": false,
+      "source": null,
+      "sourceRef": null,
+      "distanceMovedMeters": 0.0,
+      "movementFlags": [],
+      "verification": "No reliable named reusable source found; manual review required",
+      "reviewedAt": "2026-07-24"
+    },
+    {
+      "id": "platanitsi-beach",
+      "oldCoordinates": [
+        23.9735,
+        40.121
+      ],
+      "newCoordinates": [
+        23.9735,
+        40.121
+      ],
+      "changed": false,
+      "source": null,
+      "sourceRef": null,
+      "distanceMovedMeters": 0.0,
+      "movementFlags": [],
+      "verification": "No reliable named reusable source found; manual review required",
+      "reviewedAt": "2026-07-24"
+    },
+    {
+      "id": "kavourotrypes-beach",
+      "oldCoordinates": [
+        23.966,
+        40.1278
+      ],
+      "newCoordinates": [
+        23.966,
+        40.1278
+      ],
+      "changed": false,
+      "source": null,
+      "sourceRef": null,
+      "distanceMovedMeters": 0.0,
+      "movementFlags": [],
+      "verification": "No reliable named reusable source found; manual review required",
+      "reviewedAt": "2026-07-24"
+    },
+    {
+      "id": "orange-beach",
+      "oldCoordinates": [
+        23.963,
+        40.1305
+      ],
+      "newCoordinates": [
+        23.963,
+        40.1305
+      ],
+      "changed": false,
+      "source": null,
+      "sourceRef": null,
+      "distanceMovedMeters": 0.0,
+      "movementFlags": [],
+      "verification": "No reliable named reusable source found; manual review required",
+      "reviewedAt": "2026-07-24"
+    },
+    {
+      "id": "armenistis-beach",
+      "oldCoordinates": [
+        23.91,
+        40.153
+      ],
+      "newCoordinates": [
+        23.91,
+        40.153
+      ],
+      "changed": false,
+      "source": null,
+      "sourceRef": null,
+      "distanceMovedMeters": 0.0,
+      "movementFlags": [],
+      "verification": "No reliable named reusable source found; manual review required",
+      "reviewedAt": "2026-07-24"
+    },
+    {
+      "id": "kalamitsi-beach",
+      "oldCoordinates": [
+        23.991,
+        39.992
+      ],
+      "newCoordinates": [
+        23.991,
+        39.992
+      ],
+      "changed": false,
+      "source": null,
+      "sourceRef": null,
+      "distanceMovedMeters": 0.0,
+      "movementFlags": [],
+      "verification": "No reliable named reusable source found; manual review required",
+      "reviewedAt": "2026-07-24"
+    },
+    {
+      "id": "kriaritsi-beach",
+      "oldCoordinates": [
+        24.0105,
+        39.998
+      ],
+      "newCoordinates": [
+        24.0105,
+        39.998
+      ],
+      "changed": false,
+      "source": null,
+      "sourceRef": null,
+      "distanceMovedMeters": 0.0,
+      "movementFlags": [],
+      "verification": "No reliable named reusable source found; manual review required",
+      "reviewedAt": "2026-07-24"
+    },
+    {
+      "id": "klimataria-beach",
+      "oldCoordinates": [
+        24.012,
+        39.981
+      ],
+      "newCoordinates": [
+        24.012,
+        39.981
+      ],
+      "changed": false,
+      "source": null,
+      "sourceRef": null,
+      "distanceMovedMeters": 0.0,
+      "movementFlags": [],
+      "verification": "No reliable named reusable source found; manual review required",
+      "reviewedAt": "2026-07-24"
+    },
+    {
+      "id": "tigania-beach",
+      "oldCoordinates": [
+        24.017,
+        39.973
+      ],
+      "newCoordinates": [
+        24.017,
+        39.973
+      ],
+      "changed": false,
+      "source": null,
+      "sourceRef": null,
+      "distanceMovedMeters": 0.0,
+      "movementFlags": [],
+      "verification": "No reliable named reusable source found; manual review required",
+      "reviewedAt": "2026-07-24"
+    },
+    {
+      "id": "tourkolimnionas-beach",
+      "oldCoordinates": [
+        24.024,
+        39.969
+      ],
+      "newCoordinates": [
+        24.024,
+        39.969
+      ],
+      "changed": false,
+      "source": null,
+      "sourceRef": null,
+      "distanceMovedMeters": 0.0,
+      "movementFlags": [],
+      "verification": "No reliable named reusable source found; manual review required",
+      "reviewedAt": "2026-07-24"
+    },
+    {
+      "id": "sykia-beach",
+      "oldCoordinates": [
+        23.987,
+        40.038
+      ],
+      "newCoordinates": [
+        23.987,
+        40.038
+      ],
+      "changed": false,
+      "source": null,
+      "sourceRef": null,
+      "distanceMovedMeters": 0.0,
+      "movementFlags": [],
+      "verification": "No reliable named reusable source found; manual review required",
+      "reviewedAt": "2026-07-24"
+    }
+  ]
+}

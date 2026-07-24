@@ -18,3 +18,21 @@ Koordinate su decimalni WGS84 u GeoJSON redosledu `[longitude, latitude]`. Novi 
 - Izbegnite duplikate i pokrenite `node scripts/validate-sithonia-data.mjs`.
 
 Podaci o lokacijama služe za planiranje i informisanje. Ne predstavljaju zvaničnu nautičku kartu i ne potvrđuju dubinu, bezbednost prilaza, stanje mora niti pogodnost za sidrenje.
+
+## v1.1.3 audit koordinata plaža
+
+Svih 34 zapisa kategorije `beach` uključena su u audit. OpenStreetMap je određeni
+izvor za proveru imenovanih objekata plaža, ali mrežni pristup OSM servisima nije bio
+dostupan tokom ovog pregleda. Zato nijedna približna koordinata nije nagađanjem
+promenjena niti označena kao potvrđena. Svaki zapis je naveden u
+`reports/sithonia-coordinate-audit.json` kao zahtev za ručni pregled.
+
+Kada se pronađe i pregleda odgovarajući imenovani OSM objekat, zapis i audit čuvaju
+njegov identifikator (na primer `osm:way/123456`). Podaci OpenStreetMap-a su
+**© OpenStreetMap contributors** i dostupni su pod licencom
+[Open Database License (ODbL)](https://www.openstreetmap.org/copyright).
+
+Verifikacija izvora odnosi se isključivo na geografski identitet i položaj tačke.
+Ne potvrđuje dubinu, bezbedan prilaz, sidrenje, morsko dno, struje, podvodne
+opasnosti, sadržaje ili zaklon od vremena. SafeBoat nije zamena za zvaničnu
+nautičku kartu.
