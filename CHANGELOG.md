@@ -84,6 +84,14 @@
 - Active feature status chips.
 - Improved interaction between the map, POIs and control panels.
 
+## v1.1.2 — POI Coordinate Integrity Hotfix
+
+- Preserved GeoJSON `[longitude, latitude]` source order through one validated Leaflet conversion path.
+- Separated permanent beach labels from marker icons so label layout cannot affect geographic anchors.
+- Added exact marker/source coordinate assertions and stricter Sithonia coordinate validation.
+- Kept Diaporos map centering independent from stored POI coordinates.
+- No dataset coordinates or dataset version were changed.
+
 ## v1.1.1 — Diaporos Map & Responsive Beach Details
 
 - Diaporos-centered initial map view.

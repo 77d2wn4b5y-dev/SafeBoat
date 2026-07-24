@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  const VERSION = '1.1.1';
+  const VERSION = '1.1.2';
   const BUILD = '2026.07.24';
   const LOG_KEY = 'safeboat.logs';
   const THEME_KEY = 'safeboat.theme';
