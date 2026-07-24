@@ -1,7 +1,7 @@
-const CACHE = 'safeboat-v1.0.1';
+const CACHE = 'safeboat-v1.1.0';
 const APP_SHELL = [...new Set([
   './', './index.html', './styles.css', './manifest.webmanifest',
-  './js/core.js', './js/map.js', './js/gps.js', './js/safety.js', './js/voice-copilot.js', './js/trip-recorder.js', './js/route-planner.js', './js/emergency.js', './js/sithonia-guide.js', './js/app.js',
+  './js/core.js', './js/map.js', './js/gps.js', './js/safety.js', './js/voice-copilot.js', './js/trip-recorder.js', './js/route-planner.js', './js/emergency.js', './js/sithonia-guide.js', './js/ui-panels.js', './js/app.js',
   './data/beaches.geojson', './data/rocks.geojson', './data/marinas.geojson', './data/fuel.geojson', './data/sithonia-places.geojson',
   'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css', 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js'
 ])];
