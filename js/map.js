@@ -1,9 +1,9 @@
 (function () {
   'use strict';
 
-  const SITHONIA = [40.1855, 23.8250];
-  const defaultZoom = () => window.innerWidth < 500 ? 12 : 13;
-  const map = L.map('map', { zoomControl: false, preferCanvas: true, zoomAnimation: !matchMedia('(prefers-reduced-motion: reduce)').matches, markerZoomAnimation: !matchMedia('(prefers-reduced-motion: reduce)').matches }).setView(SITHONIA, defaultZoom());
+  const DIAPOROS = [40.1845, 23.8255];
+  const defaultZoom = () => 13;
+  const map = L.map('map', { zoomControl: false, preferCanvas: true, zoomAnimation: !matchMedia('(prefers-reduced-motion: reduce)').matches, markerZoomAnimation: !matchMedia('(prefers-reduced-motion: reduce)').matches }).setView(DIAPOROS, defaultZoom());
 
   const tiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
@@ -62,7 +62,7 @@
 
   window.SafeBoatMap = {
     map,
-    setDefaultSithoniaView() { map.setView(SITHONIA, defaultZoom()); return map; },
+    setDefaultSithoniaView() { map.setView(DIAPOROS, defaultZoom()); return map; },
     async loadAllLayers() {
       const results = await Promise.allSettled(Object.keys(labels).map(loadLayer));
       const failed = results.filter(result => result.status === 'rejected');

@@ -83,3 +83,12 @@
 - Responsive mobile bottom sheet and tablet side panel.
 - Active feature status chips.
 - Improved interaction between the map, POIs and control panels.
+
+## v1.1.1 — Diaporos Map & Responsive Beach Details
+
+- Diaporos-centered initial map view.
+- Permanent beach-name labels below markers.
+- Improved marker detail opening.
+- Responsive beach-detail content.
+- Removed horizontal scrolling from beach details.
+- Missing fields are omitted instead of displaying placeholders.
