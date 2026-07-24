@@ -73,3 +73,13 @@
 - Mobile bottom-sheet navigation fixed with visible back and close actions.
 - Empty optional detail rows removed; unknown nautical data is clearly identified.
 - Sithonia dataset validation strengthened.
+
+## v1.1.0 — Clean Map Interface
+
+- Map-first startup centered on Diaporos and Vourvourou.
+- Large panels collapsed by default.
+- Empty-map tap toggles controls.
+- Compact panel toggle button.
+- Responsive mobile bottom sheet and tablet side panel.
+- Active feature status chips.
+- Improved interaction between the map, POIs and control panels.

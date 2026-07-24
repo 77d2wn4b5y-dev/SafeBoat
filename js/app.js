@@ -97,6 +97,7 @@
   if (window.SafeBoatRoute) { try { window.SafeBoatRoute.init(); } catch (error) { showMessage('Planer rute nije učitan.'); } }
   if (window.SafeBoatEmergency) { try { window.SafeBoatEmergency.init(); } catch (error) { showMessage('Hitne funkcije nisu učitane.'); } }
   if (window.SafeBoatSithonia) { try { window.SafeBoatSithonia.init(); } catch (_) { showMessage('Sitonija vodič nije učitan.'); } }
+  if (window.SafeBoatPanels) { try { window.SafeBoatPanels.init(); } catch (_) { showMessage('Kontrolni paneli nisu učitani.'); } }
   const settingsDialog = document.querySelector('#settings-dialog');
   const aboutDialog = document.querySelector('#about-dialog');
   document.querySelector('#settings-open').addEventListener('click', () => settingsDialog.showModal());
