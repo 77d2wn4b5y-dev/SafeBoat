@@ -73,10 +73,11 @@ dialog{width:min(420px,calc(100% - 24px));max-height:calc(100dvh - 24px - env(sa
 @media(max-width:390px){.header-tools{gap:1px}.icon-button{width:40px;min-width:40px}.brand{font-size:.92rem}}
 @media(prefers-reduced-motion:reduce){.main-panels{transition:none}}
 
-/* v1.1.1 Diaporos map and responsive beach details */
-.sithonia-marker{position:relative;overflow:visible}
+/* v1.1.2 POI labels are separate Leaflet tooltips; marker roots retain Leaflet positioning. */
+.sithonia-marker{width:34px!important;height:34px!important;overflow:visible}
 .sithonia-marker-glyph{display:grid;width:100%;height:100%;place-items:center}
-.sithonia-marker-label{position:absolute;top:calc(100% + 5px);left:50%;width:max-content;max-width:110px;transform:translateX(-50%);padding:2px 5px;border-radius:5px;background:rgba(4,35,50,.82);color:#fff;font:700 11px/1.2 system-ui,-apple-system,"Segoe UI",sans-serif;text-align:center;text-shadow:0 1px 2px #000;white-space:normal;overflow-wrap:anywhere;pointer-events:none;user-select:none}
+.beach-marker-label{width:max-content;max-width:110px;padding:2px 5px;border:0;border-radius:5px;background:rgba(4,35,50,.82);color:#fff;font:700 11px/1.2 system-ui,-apple-system,"Segoe UI",sans-serif;text-align:center;text-shadow:0 1px 2px #000;white-space:normal;overflow-wrap:anywhere;pointer-events:none;user-select:none;box-shadow:none}
+.beach-marker-label::before{display:none}
 #sithonia-dialog{width:min(520px,calc(100vw - 24px));max-width:calc(100vw - 24px);max-height:calc(100vh - 24px);max-height:calc(100dvh - 24px - env(safe-area-inset-top) - env(safe-area-inset-bottom));overflow:hidden;box-sizing:border-box}
 .sithonia-card,.sithonia-detail,.place-facts,.place-fact,.sithonia-description,.sithonia-detail-actions{width:100%;max-width:100%;min-width:0;box-sizing:border-box}
 .sithonia-card{max-height:inherit;overflow-x:hidden;overflow-y:auto}
