@@ -64,3 +64,12 @@
 - Integracija sa Planerom rute bez automatskog pokretanja navigacije ili prepisivanja rute.
 - Lokalni GeoJSON skup podataka i responzivni interfejs vodiča.
 - Prvo stabilno SafeBoat izdanje.
+
+## v1.0.1 — Sithonia Place Details Hotfix
+
+- Marker tap now opens place details immediately.
+- Serbian location names improved.
+- Short Serbian descriptions improved for all 49 places.
+- Mobile bottom-sheet navigation fixed with visible back and close actions.
+- Empty optional detail rows removed; unknown nautical data is clearly identified.
+- Sithonia dataset validation strengthened.
